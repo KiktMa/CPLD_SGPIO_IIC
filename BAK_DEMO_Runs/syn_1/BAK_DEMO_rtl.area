@@ -1,0 +1,36 @@
+standard
+***Report Model: SGPIO_DEMO_TOP Device: EF2L15LG100B***
+
+IO Statistics
+#IO                        43
+  #input                   15
+  #output                  27
+  #inout                    1
+
+Gate Statistics
+#Basic gates              440
+  #and                     99
+  #nand                     0
+  #or                      56
+  #nor                      0
+  #xor                      0
+  #xnor                     0
+  #buf                      0
+  #not                     26
+  #bufif1                   1
+  #MX21                    24
+  #FADD                     0
+  #DFF                    226
+  #LATCH                    8
+#MACRO_ADD                 21
+#MACRO_EQ                  23
+#MACRO_MUX                240
+
+Report Hierarchy Area:
++--------------------------------------------------------------+
+|Instance      |Module                 |gates  |seq    |macros |
++--------------------------------------------------------------+
+|top           |SGPIO_DEMO_TOP         |206    |234    |44     |
+|  u_iic_drive |i2c_master             |177    |51     |23     |
+|  uut         |SGPIO_Controller_Slave |10     |108    |12     |
++--------------------------------------------------------------+

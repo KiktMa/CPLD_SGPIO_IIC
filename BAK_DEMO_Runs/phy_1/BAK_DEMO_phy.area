@@ -1,0 +1,106 @@
+standard
+***Report Model: SGPIO_DEMO_TOP Device: EF2L15LG100B***
+
+IO Statistics
+#IO                        43
+  #input                   15
+  #output                  27
+  #inout                    1
+
+Utilization Statistics
+#lut                      352   out of   1520   23.16%
+#reg                      217   out of   1520   14.28%
+#le                       359
+  #lut only               142   out of    359   39.55%
+  #reg only                 7   out of    359    1.95%
+  #lut&reg                210   out of    359   58.50%
+#dsp                        0   out of      8    0.00%
+#bram                       0   out of      6    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of      3    0.00%
+#bram128k                   0   out of      1    0.00%
+#bram256k                   0   out of      1    0.00%
+#pad                       43   out of     76   56.58%
+  #ireg                     1
+  #oreg                    17
+  #treg                     0
+#pll                        0   out of      1    0.00%
+#gclk                       3   out of     16   18.75%
+
+Clock Resource Statistics
+Index     ClockNet             Type               DriverType         Driver                         Fanout
+#1        sys_clk_dup_1        GCLK               io                 sys_clk_syn_2.di               78
+#2        SCL_SGPIO_0_dup_1    GCLK               io                 SCL_SGPIO_0_syn_2.di           37
+#3        SCL_SGPIO_1_dup_1    GCLK               io                 SCL_SGPIO_1_syn_2.di           37
+#4        transmit_trigger     GCLK               lslice             poll_counter_b[1]_syn_25.q0    9
+
+
+Detailed IO Report
+
+       Name          Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+      ACT_S0           INPUT        P10        LVCMOS25          N/A          PULLUP      NONE    
+      ACT_S1           INPUT        P17        LVCMOS25          N/A          PULLUP      NONE    
+      ACT_S2           INPUT        P25        LVCMOS25          N/A          PULLUP      NONE    
+      ACT_S3           INPUT        P30        LVCMOS25          N/A          PULLUP      NONE    
+      ACT_S4           INPUT        P43        LVCMOS25          N/A          PULLUP      NONE    
+      ACT_S5           INPUT        P49        LVCMOS25          N/A          PULLUP      NONE    
+      ACT_S6           INPUT        P54        LVCMOS25          N/A          PULLUP      NONE    
+      ACT_S7           INPUT        P60        LVCMOS25          N/A          PULLUP      NONE    
+  DATAOUT_SGPIO_0      INPUT        P36        LVCMOS25          N/A          PULLUP      NONE    
+  DATAOUT_SGPIO_1      INPUT        P68        LVCMOS25          N/A          PULLUP      NONE    
+    SCL_SGPIO_0        INPUT        P31        LVCMOS25          N/A          PULLUP      NONE    
+    SCL_SGPIO_1        INPUT        P66        LVCMOS25          N/A          PULLUP      NONE    
+   SLOAD_SGPIO_0       INPUT        P32        LVCMOS25          N/A          PULLUP      NONE    
+   SLOAD_SGPIO_1       INPUT        P67        LVCMOS25          N/A          PULLUP      NONE    
+      sys_clk          INPUT        P86        LVCMOS25          N/A          PULLUP      NONE    
+     C_ACT_S0         OUTPUT         P9        LVCMOS25          16            NONE       OREG    
+     C_ACT_S1         OUTPUT        P16        LVCMOS25          16            NONE       OREG    
+     C_ACT_S2         OUTPUT        P24        LVCMOS25          16            NONE       OREG    
+     C_ACT_S3         OUTPUT        P29        LVCMOS25           8            NONE       OREG    
+     C_ACT_S4         OUTPUT        P42        LVCMOS25           8            NONE       OREG    
+     C_ACT_S5         OUTPUT        P48        LVCMOS25           8            NONE       OREG    
+     C_ACT_S6         OUTPUT        P53        LVCMOS25          16            NONE       OREG    
+     C_ACT_S7         OUTPUT        P59        LVCMOS25          16            NONE       OREG    
+    C_ERROR_S0        OUTPUT         P8        LVCMOS25          16            NONE       OREG    
+    C_ERROR_S1        OUTPUT        P15        LVCMOS25          16            NONE       OREG    
+    C_ERROR_S2        OUTPUT        P19        LVCMOS25          16            NONE       OREG    
+    C_ERROR_S3        OUTPUT        P28        LVCMOS25           8            NONE       OREG    
+    C_ERROR_S4        OUTPUT        P41        LVCMOS25           8            NONE       OREG    
+    C_ERROR_S5        OUTPUT        P47        LVCMOS25           8            NONE       OREG    
+    C_ERROR_S6        OUTPUT        P52        LVCMOS25          16            NONE       OREG    
+    C_ERROR_S7        OUTPUT        P58        LVCMOS25          16            NONE       OREG    
+    C_LOCATE_S0       OUTPUT         P7        LVCMOS25          16            NONE       NONE    
+    C_LOCATE_S1       OUTPUT        P14        LVCMOS25          16            NONE       NONE    
+    C_LOCATE_S2       OUTPUT        P18        LVCMOS25          16            NONE       NONE    
+    C_LOCATE_S3       OUTPUT        P27        LVCMOS25           8            NONE       NONE    
+    C_LOCATE_S4       OUTPUT        P40        LVCMOS25           8            NONE       NONE    
+    C_LOCATE_S5       OUTPUT        P45        LVCMOS25           8            NONE       NONE    
+    C_LOCATE_S6       OUTPUT        P51        LVCMOS25          16            NONE       NONE    
+    C_LOCATE_S7       OUTPUT        P57        LVCMOS25          16            NONE       NONE    
+  DATAIN_SGPIO_0      OUTPUT        P37        LVCMOS25           8            NONE       NONE    
+  DATAIN_SGPIO_1      OUTPUT        P69        LVCMOS25          16            NONE       NONE    
+    smb_iic_scl       OUTPUT         P1        LVCMOS25          16            NONE       OREG    
+    smb_iic_sda        INOUT         P2        LVCMOS25          16           PULLUP      IREG    
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------+
+|Instance      |Module                 |le     |lut     |ripple  |seq     |bram    |dsp     |
++-------------------------------------------------------------------------------------------+
+|top           |SGPIO_DEMO_TOP         |359    |316     |36      |235     |0       |0       |
+|  u_iic_drive |i2c_master             |107    |100     |5       |52      |0       |0       |
+|  uut         |SGPIO_Controller_Slave |111    |111     |0       |95      |0       |0       |
++-------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout    Nets  
+    #1         1       142   
+    #2         2       162   
+    #3         3        39   
+    #4         4        25   
+    #5        5-10      27   
+    #6       11-50      19   
+    #7       51-100     1    
+  Average     3.07           

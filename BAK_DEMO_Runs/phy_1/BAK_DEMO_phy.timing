@@ -1,0 +1,1369 @@
+=========================================================================================================
+Auto created by Tang Dynasty v5.6.119222
+   Copyright (c) 2012-2024 Anlogic Inc.
+Tue May 13 09:53:04 2025
+=========================================================================================================
+
+
+Top Model:                SGPIO_DEMO_TOP                                                  
+Device:                   ef2_1                                                           
+Timing Constraint File:   ../../BAK_DEMO.sdc                                              
+STA Level:                Detail                                                          
+Speed Grade:              NA                                                              
+
+=========================================================================================================
+Timing constraint:        clock: sys_clk                                                  
+Clock = sys_clk, period 20ns, rising at 0ns, falling at 10ns
+
+378 endpoints analyzed totally, and 6710 paths analyzed
+0 errors detected : 0 setup errors (TNS = 0.000), 0 hold errors (TNS = 0.000)
+Minimum period is 5.867ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point u_iic_drive/sda_out_reg_syn_5 (92 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     14.133 ns                                                       
+ Start Point:             u_iic_drive/sel0_syn_121.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/sda_out_reg_syn_5.a[1] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.688ns  (logic 2.698ns, net 2.990ns, 47% logic)                
+ Logic Levels:            6 ( LUT5=4 LUT4=1 LUT3=1 )                                      
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/sel0_syn_121.clk (sys_clk_dup_1)                net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/sel0_syn_121.q[0]                               clk2q                   0.146 r     3.638
+ u_iic_drive/sel0_syn_112.a[0] (u_iic_drive/device_addr[0])  net  (fanout = 2)       0.629 r     4.267      ../../i2c_master.v(12)
+ u_iic_drive/sel0_syn_112.f[0]                               cell (LUT5)             0.443 r     4.710
+ u_iic_drive/reg4_syn_38.a[1] (u_iic_drive/sel0_syn_61)      net  (fanout = 1)       0.477 r     5.187      ../../i2c_master.v(292)
+ u_iic_drive/reg4_syn_38.f[1]                                cell (LUT5)             0.443 r     5.630
+ u_iic_drive/sel0_syn_119.a[1] (u_iic_drive/sda_out_n9)      net  (fanout = 2)       0.321 r     5.951                    
+ u_iic_drive/sel0_syn_119.f[1]                               cell (LUT5)             0.443 r     6.394
+ u_iic_drive/sel0_syn_126.d[1] (u_iic_drive/sel0_syn_66)     net  (fanout = 1)       0.620 r     7.014      ../../i2c_master.v(292)
+ u_iic_drive/sel0_syn_126.f[1]                               cell (LUT3)             0.214 r     7.228
+ u_iic_drive/sel0_syn_115.a[1] (u_iic_drive/sel0_syn_68)     net  (fanout = 1)       0.620 r     7.848      ../../i2c_master.v(292)
+ u_iic_drive/sel0_syn_115.f[1]                               cell (LUT5)             0.443 r     8.291
+ u_iic_drive/sda_out_reg_syn_5.a[1] (u_iic_drive/sel0_syn_72) net  (fanout = 1)       0.323 r     8.614      ../../i2c_master.v(292)
+ u_iic_drive/sda_out_reg_syn_5                               path2reg1 (LUT4)        0.566       9.180
+ Arrival time                                                                        9.180                  (6 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/sda_out_reg_syn_5.clk (sys_clk_dup_1)           net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.133ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     14.150 ns                                                       
+ Start Point:             u_iic_drive/reg3_syn_97.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/sda_out_reg_syn_5.a[1] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.671ns  (logic 2.449ns, net 3.222ns, 43% logic)                
+ Logic Levels:            6 ( LUT5=3 LUT4=2 LUT3=1 )                                      
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/reg3_syn_97.clk (sys_clk_dup_1)                 net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/reg3_syn_97.q[0]                                clk2q                   0.146 r     3.638
+ u_iic_drive/reg4_syn_41.d[1] (u_iic_drive/bit_cnt[0])       net  (fanout = 16)      0.844 r     4.482      ../../i2c_master.v(48)
+ u_iic_drive/reg4_syn_41.f[1]                                cell (LUT4)             0.274 r     4.756
+ u_iic_drive/reg4_syn_38.c[1] (u_iic_drive/sda_out_en_reg_syn_5) net  (fanout = 3)       0.494 r     5.250      ../../i2c_master.v(334)
+ u_iic_drive/reg4_syn_38.f[1]                                cell (LUT5)             0.363 r     5.613
+ u_iic_drive/sel0_syn_119.a[1] (u_iic_drive/sda_out_n9)      net  (fanout = 2)       0.321 r     5.934                    
+ u_iic_drive/sel0_syn_119.f[1]                               cell (LUT5)             0.443 r     6.377
+ u_iic_drive/sel0_syn_126.d[1] (u_iic_drive/sel0_syn_66)     net  (fanout = 1)       0.620 r     6.997      ../../i2c_master.v(292)
+ u_iic_drive/sel0_syn_126.f[1]                               cell (LUT3)             0.214 r     7.211
+ u_iic_drive/sel0_syn_115.a[1] (u_iic_drive/sel0_syn_68)     net  (fanout = 1)       0.620 r     7.831      ../../i2c_master.v(292)
+ u_iic_drive/sel0_syn_115.f[1]                               cell (LUT5)             0.443 r     8.274
+ u_iic_drive/sda_out_reg_syn_5.a[1] (u_iic_drive/sel0_syn_72) net  (fanout = 1)       0.323 r     8.597      ../../i2c_master.v(292)
+ u_iic_drive/sda_out_reg_syn_5                               path2reg1 (LUT4)        0.566       9.163
+ Arrival time                                                                        9.163                  (6 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/sda_out_reg_syn_5.clk (sys_clk_dup_1)           net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.150ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     14.212 ns                                                       
+ Start Point:             u_iic_drive/sel0_syn_121.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/sda_out_reg_syn_5.b[1] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.609ns  (logic 2.492ns, net 3.117ns, 44% logic)                
+ Logic Levels:            5 ( LUT5=4 LUT4=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/sel0_syn_121.clk (sys_clk_dup_1)                net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/sel0_syn_121.q[0]                               clk2q                   0.146 r     3.638
+ u_iic_drive/sel0_syn_112.a[0] (u_iic_drive/device_addr[0])  net  (fanout = 2)       0.629 r     4.267      ../../i2c_master.v(12)
+ u_iic_drive/sel0_syn_112.f[0]                               cell (LUT5)             0.443 r     4.710
+ u_iic_drive/reg4_syn_38.a[1] (u_iic_drive/sel0_syn_61)      net  (fanout = 1)       0.477 r     5.187      ../../i2c_master.v(292)
+ u_iic_drive/reg4_syn_38.f[1]                                cell (LUT5)             0.443 r     5.630
+ u_iic_drive/sel0_syn_112.a[1] (u_iic_drive/sda_out_n9)      net  (fanout = 2)       0.771 r     6.401                    
+ u_iic_drive/sel0_syn_112.f[1]                               cell (LUT5)             0.443 r     6.844
+ u_iic_drive/sel0_syn_119.a[0] (u_iic_drive/sel0_syn_79)     net  (fanout = 1)       0.620 r     7.464      ../../i2c_master.v(292)
+ u_iic_drive/sel0_syn_119.f[0]                               cell (LUT5)             0.443 r     7.907
+ u_iic_drive/sda_out_reg_syn_5.b[1] (u_iic_drive/sel0_syn_81) net  (fanout = 1)       0.620 r     8.527      ../../i2c_master.v(292)
+ u_iic_drive/sda_out_reg_syn_5                               path2reg1 (LUT4)        0.574       9.101
+ Arrival time                                                                        9.101                  (5 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/sda_out_reg_syn_5.clk (sys_clk_dup_1)           net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.212ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point u_iic_drive/mux6_syn_45 (20 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     14.631 ns                                                       
+ Start Point:             u_iic_drive/sda_out_en_reg_syn_34.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/mux6_syn_45.a[0] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.190ns  (logic 2.210ns, net 2.980ns, 42% logic)                
+ Logic Levels:            5 ( LUT3=3 LUT5=2 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/sda_out_en_reg_syn_34.clk (sys_clk_dup_1)       net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/sda_out_en_reg_syn_34.q[0]                      clk2q                   0.146 r     3.638
+ u_iic_drive/state_c[0]_syn_535.c[1] (u_iic_drive/state_c[3]) net  (fanout = 9)       0.552 r     4.190      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_535.f[1]                         cell (LUT3)             0.363 r     4.553
+ u_iic_drive/state_c[0]_syn_544.d[0] (u_iic_drive/state_c[0]_syn_451) net  (fanout = 3)       0.489 r     5.042      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_544.f[0]                         cell (LUT3)             0.214 r     5.256
+ u_iic_drive/reg3_syn_95.a[1] (u_iic_drive/state_c[0]_syn_455) net  (fanout = 7)       0.732 r     5.988      ../../i2c_master.v(47)
+ u_iic_drive/reg3_syn_95.fx[0]                               cell (LUT5)             0.647 r     6.635
+ u_iic_drive/reg3_syn_99.d[1] (u_iic_drive/rdata_r_b_n8)     net  (fanout = 4)       0.549 r     7.184                    
+ u_iic_drive/reg3_syn_99.f[1]                                cell (LUT3)             0.274 r     7.458
+ u_iic_drive/mux6_syn_45.a[0] (u_iic_drive/reg3_syn_37)      net  (fanout = 3)       0.658 r     8.116      ../../i2c_master.v(362)
+ u_iic_drive/mux6_syn_45                                     path2reg0 (LUT5)        0.566       8.682
+ Arrival time                                                                        8.682                  (5 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/mux6_syn_45.clk (sys_clk_dup_1)                 net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.631ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     14.631 ns                                                       
+ Start Point:             u_iic_drive/sda_out_en_reg_syn_34.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/mux6_syn_45.a[0] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.190ns  (logic 2.210ns, net 2.980ns, 42% logic)                
+ Logic Levels:            5 ( LUT3=3 LUT5=2 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/sda_out_en_reg_syn_34.clk (sys_clk_dup_1)       net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/sda_out_en_reg_syn_34.q[0]                      clk2q                   0.146 r     3.638
+ u_iic_drive/state_c[0]_syn_535.c[1] (u_iic_drive/state_c[3]) net  (fanout = 9)       0.552 r     4.190      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_535.f[1]                         cell (LUT3)             0.363 r     4.553
+ u_iic_drive/state_c[0]_syn_544.d[0] (u_iic_drive/state_c[0]_syn_451) net  (fanout = 3)       0.489 r     5.042      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_544.f[0]                         cell (LUT3)             0.214 r     5.256
+ u_iic_drive/reg3_syn_95.a[0] (u_iic_drive/state_c[0]_syn_455) net  (fanout = 7)       0.732 r     5.988      ../../i2c_master.v(47)
+ u_iic_drive/reg3_syn_95.fx[0]                               cell (LUT5)             0.647 r     6.635
+ u_iic_drive/reg3_syn_99.d[1] (u_iic_drive/rdata_r_b_n8)     net  (fanout = 4)       0.549 r     7.184                    
+ u_iic_drive/reg3_syn_99.f[1]                                cell (LUT3)             0.274 r     7.458
+ u_iic_drive/mux6_syn_45.a[0] (u_iic_drive/reg3_syn_37)      net  (fanout = 3)       0.658 r     8.116      ../../i2c_master.v(362)
+ u_iic_drive/mux6_syn_45                                     path2reg0 (LUT5)        0.566       8.682
+ Arrival time                                                                        8.682                  (5 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/mux6_syn_45.clk (sys_clk_dup_1)                 net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.631ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     14.899 ns                                                       
+ Start Point:             u_iic_drive/state_c[0]_syn_527.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/mux6_syn_45.a[0] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.922ns  (logic 2.121ns, net 2.801ns, 43% logic)                
+ Logic Levels:            5 ( LUT3=3 LUT5=2 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/state_c[0]_syn_527.clk (sys_clk_dup_1)          net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/state_c[0]_syn_527.q[0]                         clk2q                   0.146 r     3.638
+ u_iic_drive/state_c[0]_syn_535.d[1] (u_iic_drive/state_c[2]) net  (fanout = 8)       0.373 r     4.011      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_535.f[1]                         cell (LUT3)             0.274 r     4.285
+ u_iic_drive/state_c[0]_syn_544.d[0] (u_iic_drive/state_c[0]_syn_451) net  (fanout = 3)       0.489 r     4.774      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_544.f[0]                         cell (LUT3)             0.214 r     4.988
+ u_iic_drive/reg3_syn_95.a[1] (u_iic_drive/state_c[0]_syn_455) net  (fanout = 7)       0.732 r     5.720      ../../i2c_master.v(47)
+ u_iic_drive/reg3_syn_95.fx[0]                               cell (LUT5)             0.647 r     6.367
+ u_iic_drive/reg3_syn_99.d[1] (u_iic_drive/rdata_r_b_n8)     net  (fanout = 4)       0.549 r     6.916                    
+ u_iic_drive/reg3_syn_99.f[1]                                cell (LUT3)             0.274 r     7.190
+ u_iic_drive/mux6_syn_45.a[0] (u_iic_drive/reg3_syn_37)      net  (fanout = 3)       0.658 r     7.848      ../../i2c_master.v(362)
+ u_iic_drive/mux6_syn_45                                     path2reg0 (LUT5)        0.566       8.414
+ Arrival time                                                                        8.414                  (5 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/mux6_syn_45.clk (sys_clk_dup_1)                 net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.899ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point u_iic_drive/sda_out_en_reg_syn_36 (145 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     14.685 ns                                                       
+ Start Point:             u_iic_drive/sda_out_en_reg_syn_34.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/sda_out_en_reg_syn_36.c[1] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.136ns  (logic 2.224ns, net 2.912ns, 43% logic)                
+ Logic Levels:            5 ( LUT5=3 LUT3=2 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/sda_out_en_reg_syn_34.clk (sys_clk_dup_1)       net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/sda_out_en_reg_syn_34.q[0]                      clk2q                   0.146 r     3.638
+ u_iic_drive/state_c[0]_syn_535.c[1] (u_iic_drive/state_c[3]) net  (fanout = 9)       0.552 r     4.190      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_535.f[1]                         cell (LUT3)             0.363 r     4.553
+ u_iic_drive/state_c[0]_syn_544.d[0] (u_iic_drive/state_c[0]_syn_451) net  (fanout = 3)       0.489 r     5.042      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_544.f[0]                         cell (LUT3)             0.214 r     5.256
+ u_iic_drive/state_c[0]_syn_525.d[1] (u_iic_drive/state_c[0]_syn_455) net  (fanout = 7)       0.846 r     6.102      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_525.f[1]                         cell (LUT5)             0.274 r     6.376
+ u_iic_drive/sda_out_en_reg_syn_38.a[1] (u_iic_drive/state_c[5]_syn_188) net  (fanout = 4)       0.497 r     6.873      ../../i2c_master.v(47)
+ u_iic_drive/sda_out_en_reg_syn_38.fx[0]                     cell (LUT5)             0.647 r     7.520
+ u_iic_drive/sda_out_en_reg_syn_36.c[1] (u_iic_drive/sda_out_en_reg_syn_15) net  (fanout = 2)       0.528 r     8.048      ../../i2c_master.v(334)
+ u_iic_drive/sda_out_en_reg_syn_36                           path2reg0 (LUT5)        0.580       8.628
+ Arrival time                                                                        8.628                  (5 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/sda_out_en_reg_syn_36.clk (sys_clk_dup_1)       net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.685ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     14.685 ns                                                       
+ Start Point:             u_iic_drive/sda_out_en_reg_syn_34.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/sda_out_en_reg_syn_36.c[1] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.136ns  (logic 2.224ns, net 2.912ns, 43% logic)                
+ Logic Levels:            5 ( LUT5=3 LUT3=2 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/sda_out_en_reg_syn_34.clk (sys_clk_dup_1)       net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/sda_out_en_reg_syn_34.q[0]                      clk2q                   0.146 r     3.638
+ u_iic_drive/state_c[0]_syn_535.c[1] (u_iic_drive/state_c[3]) net  (fanout = 9)       0.552 r     4.190      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_535.f[1]                         cell (LUT3)             0.363 r     4.553
+ u_iic_drive/state_c[0]_syn_544.d[0] (u_iic_drive/state_c[0]_syn_451) net  (fanout = 3)       0.489 r     5.042      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_544.f[0]                         cell (LUT3)             0.214 r     5.256
+ u_iic_drive/state_c[0]_syn_525.d[1] (u_iic_drive/state_c[0]_syn_455) net  (fanout = 7)       0.846 r     6.102      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_525.f[1]                         cell (LUT5)             0.274 r     6.376
+ u_iic_drive/sda_out_en_reg_syn_38.a[0] (u_iic_drive/state_c[5]_syn_188) net  (fanout = 4)       0.497 r     6.873      ../../i2c_master.v(47)
+ u_iic_drive/sda_out_en_reg_syn_38.fx[0]                     cell (LUT5)             0.647 r     7.520
+ u_iic_drive/sda_out_en_reg_syn_36.c[1] (u_iic_drive/sda_out_en_reg_syn_15) net  (fanout = 2)       0.528 r     8.048      ../../i2c_master.v(334)
+ u_iic_drive/sda_out_en_reg_syn_36                           path2reg0 (LUT5)        0.580       8.628
+ Arrival time                                                                        8.628                  (5 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/sda_out_en_reg_syn_36.clk (sys_clk_dup_1)       net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.685ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     14.685 ns                                                       
+ Start Point:             u_iic_drive/sda_out_en_reg_syn_34.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/sda_out_en_reg_syn_36.c[0] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         5.136ns  (logic 2.224ns, net 2.912ns, 43% logic)                
+ Logic Levels:            5 ( LUT5=3 LUT3=2 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ u_iic_drive/sda_out_en_reg_syn_34.clk (sys_clk_dup_1)       net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/sda_out_en_reg_syn_34.q[0]                      clk2q                   0.146 r     3.638
+ u_iic_drive/state_c[0]_syn_535.c[1] (u_iic_drive/state_c[3]) net  (fanout = 9)       0.552 r     4.190      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_535.f[1]                         cell (LUT3)             0.363 r     4.553
+ u_iic_drive/state_c[0]_syn_544.d[0] (u_iic_drive/state_c[0]_syn_451) net  (fanout = 3)       0.489 r     5.042      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_544.f[0]                         cell (LUT3)             0.214 r     5.256
+ u_iic_drive/state_c[0]_syn_525.d[1] (u_iic_drive/state_c[0]_syn_455) net  (fanout = 7)       0.846 r     6.102      ../../i2c_master.v(47)
+ u_iic_drive/state_c[0]_syn_525.f[1]                         cell (LUT5)             0.274 r     6.376
+ u_iic_drive/sda_out_en_reg_syn_38.a[1] (u_iic_drive/state_c[5]_syn_188) net  (fanout = 4)       0.497 r     6.873      ../../i2c_master.v(47)
+ u_iic_drive/sda_out_en_reg_syn_38.fx[0]                     cell (LUT5)             0.647 r     7.520
+ u_iic_drive/sda_out_en_reg_syn_36.c[0] (u_iic_drive/sda_out_en_reg_syn_15) net  (fanout = 2)       0.528 r     8.048      ../../i2c_master.v(334)
+ u_iic_drive/sda_out_en_reg_syn_36                           path2reg0 (LUT5)        0.580       8.628
+ Arrival time                                                                        8.628                  (5 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/sda_out_en_reg_syn_36.clk (sys_clk_dup_1)       net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell setup                                                                         -0.116      23.024
+ clock uncertainty                                                                  -0.000      23.024
+ clock recovergence pessimism                                                        0.289      23.313
+ Required time                                                                      23.313            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              14.685ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point u_iic_drive/reg4_syn_41 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.457 ns                                                        
+ Start Point:             u_iic_drive/reg3_syn_97.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/reg4_syn_41.mi[0] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         0.566ns  (logic 0.208ns, net 0.358ns, 36% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ u_iic_drive/reg3_syn_97.clk (sys_clk_dup_1)                 net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/reg3_syn_97.q[1]                                clk2q                   0.109 r     2.719
+ u_iic_drive/reg4_syn_41.mi[0] (u_iic_drive/rdata_r[7])      net  (fanout = 2)       0.358 r     3.077      ../../i2c_master.v(55)
+ u_iic_drive/reg4_syn_41                                     path2reg0               0.099       3.176
+ Arrival time                                                                        3.176                  (0 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ u_iic_drive/reg4_syn_41.clk (sys_clk_dup_1)                 net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell hold                                                                           0.061       2.928
+ clock uncertainty                                                                   0.000       2.928
+ clock recovergence pessimism                                                       -0.209       2.719
+ Required time                                                                       2.719            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.457ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point u_iic_drive/reg4_syn_46 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.457 ns                                                        
+ Start Point:             u_iic_drive/reg3_syn_89.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/reg4_syn_46.mi[0] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         0.566ns  (logic 0.208ns, net 0.358ns, 36% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ u_iic_drive/reg3_syn_89.clk (sys_clk_dup_1)                 net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/reg3_syn_89.q[1]                                clk2q                   0.109 r     2.719
+ u_iic_drive/reg4_syn_46.mi[0] (u_iic_drive/rdata_r[2])      net  (fanout = 2)       0.358 r     3.077      ../../i2c_master.v(55)
+ u_iic_drive/reg4_syn_46                                     path2reg0               0.099       3.176
+ Arrival time                                                                        3.176                  (0 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ u_iic_drive/reg4_syn_46.clk (sys_clk_dup_1)                 net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell hold                                                                           0.061       2.928
+ clock uncertainty                                                                   0.000       2.928
+ clock recovergence pessimism                                                       -0.209       2.719
+ Required time                                                                       2.719            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.457ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point u_iic_drive/reg4_syn_41 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.469 ns                                                        
+ Start Point:             u_iic_drive/reg3_syn_86.clk (rising edge triggered by clock sys_clk)
+ End Point:               u_iic_drive/reg4_syn_41.mi[1] (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         0.545ns  (logic 0.208ns, net 0.337ns, 38% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ u_iic_drive/reg3_syn_86.clk (sys_clk_dup_1)                 net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ u_iic_drive/reg3_syn_86.q[1]                                clk2q                   0.109 r     2.719
+ u_iic_drive/reg4_syn_41.mi[1] (u_iic_drive/rdata_r[3])      net  (fanout = 2)       0.337 r     3.056      ../../i2c_master.v(55)
+ u_iic_drive/reg4_syn_41                                     path2reg1               0.099       3.155
+ Arrival time                                                                        3.155                  (0 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ u_iic_drive/reg4_syn_41.clk (sys_clk_dup_1)                 net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell hold                                                                           0.061       2.928
+ clock uncertainty                                                                   0.000       2.928
+ clock recovergence pessimism                                                       -0.242       2.686
+ Required time                                                                       2.686            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.469ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Recovery checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point u_iic_drive/state_c[0]_syn_537 (16 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (recovery check):  15.331 ns                                                       
+ Start Point:             reg6_syn_91.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/state_c[0]_syn_537.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.306ns  (logic 1.294ns, net 3.012ns, 30% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_91.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_91.q[1]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.b[0] (rst_cnt[7])                               net  (fanout = 2)       0.637 r     4.275      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.348 r     4.623
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.303      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.517
+ rw_flag_b_reg_syn_65.a[1] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     6.055      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[1]                                   cell (LUT5)             0.443 r     6.498
+ u_iic_drive/state_c[0]_syn_537.sr (rst_cnt_b_n_dup_2)       net  (fanout = 18)      1.157 r     7.655                    
+ u_iic_drive/state_c[0]_syn_537                              path2reg                0.143       7.798
+ Arrival time                                                                        7.798                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/state_c[0]_syn_537.clk (sys_clk_dup_1)          net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.331ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (recovery check):  15.488 ns                                                       
+ Start Point:             reg6_syn_79.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/state_c[0]_syn_537.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.149ns  (logic 1.208ns, net 2.941ns, 29% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_79.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_79.q[1]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.c[0] (rst_cnt[8])                               net  (fanout = 2)       0.566 r     4.204      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.262 r     4.466
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.146      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.360
+ rw_flag_b_reg_syn_65.a[1] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     5.898      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[1]                                   cell (LUT5)             0.443 r     6.341
+ u_iic_drive/state_c[0]_syn_537.sr (rst_cnt_b_n_dup_2)       net  (fanout = 18)      1.157 r     7.498                    
+ u_iic_drive/state_c[0]_syn_537                              path2reg                0.143       7.641
+ Arrival time                                                                        7.641                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/state_c[0]_syn_537.clk (sys_clk_dup_1)          net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.488ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (recovery check):  15.544 ns                                                       
+ Start Point:             reg6_syn_94.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/state_c[0]_syn_537.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.093ns  (logic 1.373ns, net 2.720ns, 33% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_94.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_94.q[0]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.a[0] (rst_cnt[6])                               net  (fanout = 2)       0.345 r     3.983      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.427 r     4.410
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.090      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.304
+ rw_flag_b_reg_syn_65.a[1] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     5.842      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[1]                                   cell (LUT5)             0.443 r     6.285
+ u_iic_drive/state_c[0]_syn_537.sr (rst_cnt_b_n_dup_2)       net  (fanout = 18)      1.157 r     7.442                    
+ u_iic_drive/state_c[0]_syn_537                              path2reg                0.143       7.585
+ Arrival time                                                                        7.585                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/state_c[0]_syn_537.clk (sys_clk_dup_1)          net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.544ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point u_iic_drive/wr_flag_reg_syn_8 (16 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (recovery check):  15.331 ns                                                       
+ Start Point:             reg6_syn_91.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/wr_flag_reg_syn_8.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.306ns  (logic 1.294ns, net 3.012ns, 30% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_91.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_91.q[1]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.b[0] (rst_cnt[7])                               net  (fanout = 2)       0.637 r     4.275      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.348 r     4.623
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.303      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.517
+ rw_flag_b_reg_syn_65.a[1] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     6.055      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[1]                                   cell (LUT5)             0.443 r     6.498
+ u_iic_drive/wr_flag_reg_syn_8.sr (rst_cnt_b_n_dup_2)        net  (fanout = 18)      1.157 r     7.655                    
+ u_iic_drive/wr_flag_reg_syn_8                               path2reg                0.143       7.798
+ Arrival time                                                                        7.798                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/wr_flag_reg_syn_8.clk (sys_clk_dup_1)           net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.331ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (recovery check):  15.488 ns                                                       
+ Start Point:             reg6_syn_79.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/wr_flag_reg_syn_8.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.149ns  (logic 1.208ns, net 2.941ns, 29% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_79.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_79.q[1]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.c[0] (rst_cnt[8])                               net  (fanout = 2)       0.566 r     4.204      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.262 r     4.466
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.146      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.360
+ rw_flag_b_reg_syn_65.a[1] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     5.898      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[1]                                   cell (LUT5)             0.443 r     6.341
+ u_iic_drive/wr_flag_reg_syn_8.sr (rst_cnt_b_n_dup_2)        net  (fanout = 18)      1.157 r     7.498                    
+ u_iic_drive/wr_flag_reg_syn_8                               path2reg                0.143       7.641
+ Arrival time                                                                        7.641                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/wr_flag_reg_syn_8.clk (sys_clk_dup_1)           net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.488ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (recovery check):  15.544 ns                                                       
+ Start Point:             reg6_syn_94.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/wr_flag_reg_syn_8.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.093ns  (logic 1.373ns, net 2.720ns, 33% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_94.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_94.q[0]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.a[0] (rst_cnt[6])                               net  (fanout = 2)       0.345 r     3.983      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.427 r     4.410
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.090      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.304
+ rw_flag_b_reg_syn_65.a[1] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     5.842      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[1]                                   cell (LUT5)             0.443 r     6.285
+ u_iic_drive/wr_flag_reg_syn_8.sr (rst_cnt_b_n_dup_2)        net  (fanout = 18)      1.157 r     7.442                    
+ u_iic_drive/wr_flag_reg_syn_8                               path2reg                0.143       7.585
+ Arrival time                                                                        7.585                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/wr_flag_reg_syn_8.clk (sys_clk_dup_1)           net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.544ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point u_iic_drive/state_c[0]_syn_520 (16 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (recovery check):  15.350 ns                                                       
+ Start Point:             reg6_syn_91.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/state_c[0]_syn_520.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.287ns  (logic 1.294ns, net 2.993ns, 30% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_91.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_91.q[1]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.b[0] (rst_cnt[7])                               net  (fanout = 2)       0.637 r     4.275      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.348 r     4.623
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.303      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.517
+ rw_flag_b_reg_syn_65.a[0] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     6.055      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[0]                                   cell (LUT5)             0.443 r     6.498
+ u_iic_drive/state_c[0]_syn_520.sr (rst_cnt_b_n_dup_3)       net  (fanout = 27)      1.138 r     7.636                    
+ u_iic_drive/state_c[0]_syn_520                              path2reg                0.143       7.779
+ Arrival time                                                                        7.779                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/state_c[0]_syn_520.clk (sys_clk_dup_1)          net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.350ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (recovery check):  15.507 ns                                                       
+ Start Point:             reg6_syn_79.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/state_c[0]_syn_520.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.130ns  (logic 1.208ns, net 2.922ns, 29% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_79.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_79.q[1]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.c[0] (rst_cnt[8])                               net  (fanout = 2)       0.566 r     4.204      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.262 r     4.466
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.146      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.360
+ rw_flag_b_reg_syn_65.a[0] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     5.898      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[0]                                   cell (LUT5)             0.443 r     6.341
+ u_iic_drive/state_c[0]_syn_520.sr (rst_cnt_b_n_dup_3)       net  (fanout = 27)      1.138 r     7.479                    
+ u_iic_drive/state_c[0]_syn_520                              path2reg                0.143       7.622
+ Arrival time                                                                        7.622                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/state_c[0]_syn_520.clk (sys_clk_dup_1)          net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.507ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (recovery check):  15.563 ns                                                       
+ Start Point:             reg6_syn_94.clk (rising edge triggered by clock sys_clk)        
+ End Point:               u_iic_drive/state_c[0]_syn_520.sr (rising edge triggered by clock sys_clk)
+ Clock group:             sys_clk                                                         
+ Process:                 Slow                                                            
+ Data Path Delay:         4.074ns  (logic 1.373ns, net 2.701ns, 33% logic)                
+ Logic Levels:            3 ( LUT4=2 LUT5=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.890       1.890                    
+ reg6_syn_94.clk (sys_clk_dup_1)                             net                     1.602       3.492      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       3.492
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_94.q[0]                                            clk2q                   0.146 r     3.638
+ reg6_syn_88.a[0] (rst_cnt[6])                               net  (fanout = 2)       0.345 r     3.983      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_88.f[0]                                            cell (LUT4)             0.427 r     4.410
+ reg6_syn_85.d[1] (rw_flag_b_reg_syn_5)                      net  (fanout = 1)       0.680 r     5.090      ../../SGPIO_DEMO_TOP.v(117)
+ reg6_syn_85.f[1]                                            cell (LUT4)             0.214 r     5.304
+ rw_flag_b_reg_syn_65.a[0] (rw_flag_b_reg_syn_7)             net  (fanout = 7)       0.538 r     5.842      ../../SGPIO_DEMO_TOP.v(117)
+ rw_flag_b_reg_syn_65.f[0]                                   cell (LUT5)             0.443 r     6.285
+ u_iic_drive/state_c[0]_syn_520.sr (rst_cnt_b_n_dup_3)       net  (fanout = 27)      1.138 r     7.423                    
+ u_iic_drive/state_c[0]_syn_520                              path2reg                0.143       7.566
+ Arrival time                                                                        7.566                  (3 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.700       1.700                    
+ u_iic_drive/state_c[0]_syn_520.clk (sys_clk_dup_1)          net                     1.440       3.140      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                 20.000      23.140
+---------------------------------------------------------------------------------------------------------
+ cell recovery                                                                      -0.300      22.840
+ clock uncertainty                                                                  -0.000      22.840
+ clock recovergence pessimism                                                        0.289      23.129
+ Required time                                                                      23.129            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              15.563ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Removal checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point reg0_syn_149 (16 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (removal check):   0.804 ns                                                        
+ Start Point:             add3_syn_98.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_149.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.105ns  (logic 0.384ns, net 0.721ns, 34% logic)                
+ Logic Levels:            1 ( LUT5=1 )                                                    
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ add3_syn_98.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ add3_syn_98.q[1]                                            clk2q                   0.109 r     2.719
+ reg0_syn_131.d[0] (rst_cnt[10])                             net  (fanout = 8)       0.451 r     3.170      ../../SGPIO_DEMO_TOP.v(68)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.188 r     3.358
+ reg0_syn_149.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.270 r     3.628                    
+ reg0_syn_149                                                path2reg                0.087       3.715
+ Arrival time                                                                        3.715                  (1 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_149.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.804ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (removal check):   0.914 ns                                                        
+ Start Point:             reg6_syn_91.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_149.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.215ns  (logic 0.421ns, net 0.794ns, 34% logic)                
+ Logic Levels:            1 ( LUT5=1 )                                                    
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ reg6_syn_91.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_91.q[0]                                            clk2q                   0.109 r     2.719
+ reg0_syn_131.e[0] (rst_cnt[11])                             net  (fanout = 6)       0.524 r     3.243      ../../SGPIO_DEMO_TOP.v(68)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.225 r     3.468
+ reg0_syn_149.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.270 r     3.738                    
+ reg0_syn_149                                                path2reg                0.087       3.825
+ Arrival time                                                                        3.825                  (1 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_149.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.914ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (removal check):   1.345 ns                                                        
+ Start Point:             reg6_syn_85.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_149.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.646ns  (logic 0.690ns, net 0.956ns, 41% logic)                
+ Logic Levels:            2 ( LUT5=1 LUT4=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ reg6_syn_85.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_85.q[1]                                            clk2q                   0.109 r     2.719
+ reg6_syn_85.c[0] (rst_cnt[14])                              net  (fanout = 2)       0.337 r     3.056      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_85.f[0]                                            cell (LUT4)             0.158 r     3.214
+ reg0_syn_131.b[0] (rw_flag_b_reg_syn_9)                     net  (fanout = 7)       0.349 r     3.563      ../../SGPIO_DEMO_TOP.v(117)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.336 r     3.899
+ reg0_syn_149.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.270 r     4.169                    
+ reg0_syn_149                                                path2reg                0.087       4.256
+ Arrival time                                                                        4.256                  (2 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_149.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               1.345ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point reg0_syn_146 (16 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (removal check):   0.906 ns                                                        
+ Start Point:             add3_syn_98.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_146.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.207ns  (logic 0.384ns, net 0.823ns, 31% logic)                
+ Logic Levels:            1 ( LUT5=1 )                                                    
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ add3_syn_98.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ add3_syn_98.q[1]                                            clk2q                   0.109 r     2.719
+ reg0_syn_131.d[0] (rst_cnt[10])                             net  (fanout = 8)       0.451 r     3.170      ../../SGPIO_DEMO_TOP.v(68)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.188 r     3.358
+ reg0_syn_146.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.372 r     3.730                    
+ reg0_syn_146                                                path2reg                0.087       3.817
+ Arrival time                                                                        3.817                  (1 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_146.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.906ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (removal check):   1.016 ns                                                        
+ Start Point:             reg6_syn_91.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_146.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.317ns  (logic 0.421ns, net 0.896ns, 31% logic)                
+ Logic Levels:            1 ( LUT5=1 )                                                    
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ reg6_syn_91.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_91.q[0]                                            clk2q                   0.109 r     2.719
+ reg0_syn_131.e[0] (rst_cnt[11])                             net  (fanout = 6)       0.524 r     3.243      ../../SGPIO_DEMO_TOP.v(68)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.225 r     3.468
+ reg0_syn_146.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.372 r     3.840                    
+ reg0_syn_146                                                path2reg                0.087       3.927
+ Arrival time                                                                        3.927                  (1 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_146.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               1.016ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (removal check):   1.447 ns                                                        
+ Start Point:             reg6_syn_85.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_146.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.748ns  (logic 0.690ns, net 1.058ns, 39% logic)                
+ Logic Levels:            2 ( LUT5=1 LUT4=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ reg6_syn_85.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_85.q[1]                                            clk2q                   0.109 r     2.719
+ reg6_syn_85.c[0] (rst_cnt[14])                              net  (fanout = 2)       0.337 r     3.056      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_85.f[0]                                            cell (LUT4)             0.158 r     3.214
+ reg0_syn_131.b[0] (rw_flag_b_reg_syn_9)                     net  (fanout = 7)       0.349 r     3.563      ../../SGPIO_DEMO_TOP.v(117)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.336 r     3.899
+ reg0_syn_146.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.372 r     4.271                    
+ reg0_syn_146                                                path2reg                0.087       4.358
+ Arrival time                                                                        4.358                  (2 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_146.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               1.447ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point reg0_syn_137 (16 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (removal check):   0.906 ns                                                        
+ Start Point:             add3_syn_98.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_137.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.207ns  (logic 0.384ns, net 0.823ns, 31% logic)                
+ Logic Levels:            1 ( LUT5=1 )                                                    
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ add3_syn_98.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ add3_syn_98.q[1]                                            clk2q                   0.109 r     2.719
+ reg0_syn_131.d[0] (rst_cnt[10])                             net  (fanout = 8)       0.451 r     3.170      ../../SGPIO_DEMO_TOP.v(68)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.188 r     3.358
+ reg0_syn_137.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.372 r     3.730                    
+ reg0_syn_137                                                path2reg                0.087       3.817
+ Arrival time                                                                        3.817                  (1 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_137.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.906ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (removal check):   1.016 ns                                                        
+ Start Point:             reg6_syn_91.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_137.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.317ns  (logic 0.421ns, net 0.896ns, 31% logic)                
+ Logic Levels:            1 ( LUT5=1 )                                                    
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ reg6_syn_91.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_91.q[0]                                            clk2q                   0.109 r     2.719
+ reg0_syn_131.e[0] (rst_cnt[11])                             net  (fanout = 6)       0.524 r     3.243      ../../SGPIO_DEMO_TOP.v(68)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.225 r     3.468
+ reg0_syn_137.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.372 r     3.840                    
+ reg0_syn_137                                                path2reg                0.087       3.927
+ Arrival time                                                                        3.927                  (1 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_137.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               1.016ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (removal check):   1.447 ns                                                        
+ Start Point:             reg6_syn_85.clk (rising edge triggered by clock sys_clk)        
+ End Point:               reg0_syn_137.sr (rising edge triggered by clock sys_clk)        
+ Clock group:             sys_clk                                                         
+ Process:                 Fast                                                            
+ Data Path Delay:         1.748ns  (logic 0.690ns, net 1.058ns, 39% logic)                
+ Logic Levels:            2 ( LUT5=1 LUT4=1 )                                             
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.310       1.310                    
+ reg6_syn_85.clk (sys_clk_dup_1)                             net                     1.300       2.610      ../../SGPIO_DEMO_TOP.v(3)
+ launch clock edge                                                                   0.000       2.610
+---------------------------------------------------------------------------------------------------------
+ reg6_syn_85.q[1]                                            clk2q                   0.109 r     2.719
+ reg6_syn_85.c[0] (rst_cnt[14])                              net  (fanout = 2)       0.337 r     3.056      ../../SGPIO_DEMO_TOP.v(68)
+ reg6_syn_85.f[0]                                            cell (LUT4)             0.158 r     3.214
+ reg0_syn_131.b[0] (rw_flag_b_reg_syn_9)                     net  (fanout = 7)       0.349 r     3.563      ../../SGPIO_DEMO_TOP.v(117)
+ reg0_syn_131.f[0]                                           cell (LUT5)             0.336 r     3.899
+ reg0_syn_137.sr (rst_cnt_b_n_dup_4)                         net  (fanout = 22)      0.372 r     4.271                    
+ reg0_syn_137                                                path2reg                0.087       4.358
+ Arrival time                                                                        4.358                  (2 lvl)       
+
+ source latency                                                                      0.000       0.000                    
+ sys_clk                                                                             0.000       0.000                    
+ sys_clk_syn_2.ipad                                          hier                    0.000       0.000                    
+ sys_clk_syn_2.di                                            cell (PAD)              1.440       1.440                    
+ reg0_syn_137.clk (sys_clk_dup_1)                            net                     1.427       2.867      ../../SGPIO_DEMO_TOP.v(3)
+ capture clock edge                                                                  0.000       2.867
+---------------------------------------------------------------------------------------------------------
+ cell removal                                                                        0.253       3.120
+ clock uncertainty                                                                   0.000       3.120
+ clock recovergence pessimism                                                       -0.209       2.911
+ Required time                                                                       2.911            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               1.447ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing summary:                                                                           
+---------------------------------------------------------------------------------------------------------
+Constraint path number: 6710 (STA coverage = 65.14%)
+Timing violations: 0 setup errors, and 0 hold errors.
+Minimal setup slack: 14.133, minimal hold slack: 0.457
+
+Timing group statistics: 
+	Clock constraints: 
+	  Clock Name                                  Min Period     Max Freq           Skew      Fanout            TNS
+	  sys_clk (50.000MHz)                            5.867ns     170.445MHz        0.262ns        78        0.000ns
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+
+
+Warning: No clock constraint on 3 clock net(s): 
+	SCL_SGPIO_0_syn_4
+	SCL_SGPIO_1_syn_4
+	transmit_trigger_syn_4
+
+---------------------------------------------------------------------------------------------------------
