@@ -8,12 +8,12 @@ IO Statistics
   #inout                    1
 
 Utilization Statistics
-#lut                      352   out of   1520   23.16%
-#reg                      217   out of   1520   14.28%
-#le                       359
-  #lut only               142   out of    359   39.55%
-  #reg only                 7   out of    359    1.95%
-  #lut&reg                210   out of    359   58.50%
+#lut                      298   out of   1520   19.61%
+#reg                      189   out of   1520   12.43%
+#le                       310
+  #lut only               121   out of    310   39.03%
+  #reg only                12   out of    310    3.87%
+  #lut&reg                177   out of    310   57.10%
 #dsp                        0   out of      8    0.00%
 #bram                       0   out of      6    0.00%
   #bram9k                   0
@@ -29,11 +29,11 @@ Utilization Statistics
 #gclk                       3   out of     16   18.75%
 
 Clock Resource Statistics
-Index     ClockNet             Type               DriverType         Driver                         Fanout
-#1        sys_clk_dup_1        GCLK               io                 sys_clk_syn_2.di               78
-#2        SCL_SGPIO_0_dup_1    GCLK               io                 SCL_SGPIO_0_syn_2.di           37
-#3        SCL_SGPIO_1_dup_1    GCLK               io                 SCL_SGPIO_1_syn_2.di           37
-#4        transmit_trigger     GCLK               lslice             poll_counter_b[1]_syn_25.q0    9
+Index     ClockNet             Type               DriverType         Driver                  Fanout
+#1        sys_clk_dup_1        GCLK               io                 sys_clk_syn_2.di        77
+#2        SCL_SGPIO_0_dup_1    GCLK               io                 SCL_SGPIO_0_syn_2.di    28
+#3        SCL_SGPIO_1_dup_1    GCLK               io                 SCL_SGPIO_1_syn_2.di    28
+#4        transmit_trigger     GCLK               lslice             reg0_syn_139.q0         9
 
 
 Detailed IO Report
@@ -87,20 +87,19 @@ Report Hierarchy Area:
 +-------------------------------------------------------------------------------------------+
 |Instance      |Module                 |le     |lut     |ripple  |seq     |bram    |dsp     |
 +-------------------------------------------------------------------------------------------+
-|top           |SGPIO_DEMO_TOP         |359    |316     |36      |235     |0       |0       |
-|  u_iic_drive |i2c_master             |107    |100     |5       |52      |0       |0       |
-|  uut         |SGPIO_Controller_Slave |111    |111     |0       |95      |0       |0       |
+|top           |SGPIO_DEMO_TOP         |310    |267     |31      |207     |0       |0       |
+|  u_iic_drive |i2c_master             |112    |104     |5       |51      |0       |0       |
+|  uut         |SGPIO_Controller_Slave |82     |75      |0       |72      |0       |0       |
 +-------------------------------------------------------------------------------------------+
 
 
 DataNet Average Fanout:
 
    Index     Fanout    Nets  
-    #1         1       142   
-    #2         2       162   
-    #3         3        39   
-    #4         4        25   
-    #5        5-10      27   
-    #6       11-50      19   
-    #7       51-100     1    
-  Average     3.07           
+    #1         1       172   
+    #2         2       112   
+    #3         3        36   
+    #4         4        17   
+    #5        5-10      29   
+    #6       11-50      21   
+  Average     2.91           

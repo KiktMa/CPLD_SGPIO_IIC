@@ -1,11 +1,11 @@
 module CW_TOP_WRAPPER(jtdi, jtck, jrstn, jscan, jshift, jupdate, jtdo, trig_clk, bus_din, wt_ce, wt_en, wt_addr);
 	localparam STAT_REG_LEN = 18;
-	localparam BUS_NUM = 9;
-	localparam BUS_DIN_NUM = 28;
-	localparam BUS_CTRL_NUM = 92;
-	localparam integer BUS_WIDTH[0:8] = {1,1,7,1,1,9,3,4,1};
-	localparam integer BUS_DIN_POS[0:8] = {0,1,2,9,10,11,20,23,27};
-	localparam integer BUS_CTRL_POS[0:8] = {0,6,12,30,36,42,64,74,86};
+	localparam BUS_NUM = 3;
+	localparam BUS_DIN_NUM = 13;
+	localparam BUS_CTRL_NUM = 38;
+	localparam integer BUS_WIDTH[0:2] = {11,1,1};
+	localparam integer BUS_DIN_POS[0:2] = {0,11,12};
+	localparam integer BUS_CTRL_POS[0:2] = {0,26,32};
 
 	input jtdi;
 	input jtck;

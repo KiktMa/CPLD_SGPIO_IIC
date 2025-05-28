@@ -8,16 +8,16 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts               359
-  #lut4                   238
-  #lut5                    30
+#Total_luts               300
+  #lut4                   192
+  #lut5                    27
   #lut6                     0
   #lut5_mx41                0
-  #lut4_alu1b              91
+  #lut4_alu1b              81
 
 Utilization Statistics
-#lut                      359   out of   1520   23.62%
-#reg                      217   out of   1520   14.28%
+#lut                      300   out of   1520   19.74%
+#reg                      189   out of   1520   12.43%
 #le                         0
 #dsp                        0   out of      8    0.00%
 #bram                       0   out of      6    0.00%
@@ -36,7 +36,7 @@ Report Hierarchy Area:
 +-----------------------------------------------------------------------------------+
 |Instance      |Module                 |lut     |ripple  |seq     |bram    |dsp     |
 +-----------------------------------------------------------------------------------+
-|top           |SGPIO_DEMO_TOP         |268     |91      |235     |0       |0       |
-|  u_iic_drive |i2c_master             |89      |9       |50      |0       |0       |
-|  uut         |SGPIO_Controller_Slave |116     |0       |100     |0       |0       |
+|top           |SGPIO_DEMO_TOP         |219     |81      |207     |0       |0       |
+|  u_iic_drive |i2c_master             |91      |9       |50      |0       |0       |
+|  uut         |SGPIO_Controller_Slave |64      |0       |72      |0       |0       |
 +-----------------------------------------------------------------------------------+

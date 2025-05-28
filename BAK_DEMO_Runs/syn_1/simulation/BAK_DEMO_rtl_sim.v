@@ -1,5 +1,5 @@
 // Verilog netlist created by Tang Dynasty v5.6.119222
-// Tue May 13 09:52:59 2025
+// Mon May 26 14:42:11 2025
 
 `timescale 1ns / 1ps
 module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
@@ -98,11 +98,11 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
   parameter FSCL = 250000;
   parameter REG_ADDR_BYTE_NUM = 1;
   parameter TRANSMIT_INTERVAL = 250000000;
-  wire [26:0] clk_counter;  // ../../SGPIO_DEMO_TOP.v(109)
+  wire [26:0] clk_counter;  // ../../SGPIO_DEMO_TOP.v(110)
   wire [26:0] clk_counter_b;
   wire [26:0] clk_counter_b1;
   wire [6:0] device_addr_b;
-  wire [7:0] device_reg_addr;  // ../../SGPIO_DEMO_TOP.v(166)
+  wire [7:0] device_reg_addr;  // ../../SGPIO_DEMO_TOP.v(167)
   wire [7:0] device_reg_addr_b;
   wire [1:0] device_sel_reg;  // ../../SGPIO_DEMO_TOP.v(65)
   wire [1:0] device_sel_reg_b1;
@@ -110,7 +110,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
   wire [15:0] poll_counter_b;
   wire [15:0] poll_counter_b1;
   wire [7:0] pwm_control;  // ../../SGPIO_DEMO_TOP.v(61)
-  wire [7:0] rdata;  // ../../SGPIO_DEMO_TOP.v(261)
+  wire [7:0] rdata;  // ../../SGPIO_DEMO_TOP.v(324)
   wire [15:0] rst_cnt;  // ../../SGPIO_DEMO_TOP.v(68)
   wire [15:0] rst_cnt_b;
   wire [15:0] rst_cnt_b1;
@@ -155,54 +155,46 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
   wire [6:0] \u_iic_drive/state_n_b6 ;
   wire [4:0] \u_iic_drive/state_n_b7 ;
   wire [7:0] \u_iic_drive/wdata_r ;  // ../../i2c_master.v(53)
-  wire [4:0] \uut/bit_count_0 ;  // ../../SGPIO_Controller_Slave.v(24)
+  wire [4:0] \uut/bit_count_0 ;  // ../../SGPIO_Controller_Slave.v(26)
   wire [4:0] \uut/bit_count_0_b ;
   wire [4:0] \uut/bit_count_0_b1 ;
   wire [4:0] \uut/bit_count_0_b2 ;
-  wire [3:0] \uut/bit_count_0_local ;  // ../../SGPIO_Controller_Slave.v(30)
-  wire [3:0] \uut/bit_count_0_local_b ;
-  wire [3:0] \uut/bit_count_0_local_b1 ;
-  wire [3:0] \uut/bit_count_0_local_b2 ;
-  wire [4:0] \uut/bit_count_1 ;  // ../../SGPIO_Controller_Slave.v(25)
+  wire [4:0] \uut/bit_count_1 ;  // ../../SGPIO_Controller_Slave.v(27)
   wire [4:0] \uut/bit_count_1_b ;
   wire [4:0] \uut/bit_count_1_b1 ;
   wire [4:0] \uut/bit_count_1_b2 ;
-  wire [3:0] \uut/bit_count_1_local ;  // ../../SGPIO_Controller_Slave.v(31)
-  wire [3:0] \uut/bit_count_1_local_b ;
-  wire [3:0] \uut/bit_count_1_local_b1 ;
-  wire [3:0] \uut/bit_count_1_local_b2 ;
-  wire [23:0] \uut/data_buffer_0 ;  // ../../SGPIO_Controller_Slave.v(22)
+  wire [23:0] \uut/data_buffer_0 ;  // ../../SGPIO_Controller_Slave.v(24)
   wire [23:0] \uut/data_buffer_0_b ;
   wire [23:0] \uut/data_buffer_0_b1 ;
-  wire [11:0] \uut/data_buffer_0_local ;  // ../../SGPIO_Controller_Slave.v(28)
-  wire [11:0] \uut/data_buffer_0_local_b ;
-  wire [11:0] \uut/data_buffer_0_local_b1 ;
-  wire [23:0] \uut/data_buffer_1 ;  // ../../SGPIO_Controller_Slave.v(23)
+  wire [23:0] \uut/data_buffer_1 ;  // ../../SGPIO_Controller_Slave.v(25)
   wire [23:0] \uut/data_buffer_1_b ;
   wire [23:0] \uut/data_buffer_1_b1 ;
-  wire [11:0] \uut/data_buffer_1_local ;  // ../../SGPIO_Controller_Slave.v(29)
-  wire [11:0] \uut/data_buffer_1_local_b ;
-  wire [11:0] \uut/data_buffer_1_local_b1 ;
   wire [23:0] \uut/sgpio_0_data_out ;  // ../../SGPIO_Controller_Slave.v(15)
-  wire [11:0] \uut/sgpio_0_data_out_local ;  // ../../SGPIO_Controller_Slave.v(17)
   wire [23:0] \uut/sgpio_1_data_out ;  // ../../SGPIO_Controller_Slave.v(16)
-  wire [11:0] \uut/sgpio_1_data_out_local ;  // ../../SGPIO_Controller_Slave.v(18)
-  wire rw_flag_b_i_syn_3;  // ../../SGPIO_DEMO_TOP.v(117)
+  wire rw_flag_b_i_syn_3;  // ../../SGPIO_DEMO_TOP.v(118)
   wire C_ACT_S0_n;
+  wire C_ACT_S0_n1;
   wire C_ACT_S1_n;
+  wire C_ACT_S1_n1;
   wire C_ACT_S2_n;
+  wire C_ACT_S2_n1;
   wire C_ACT_S3_n;
+  wire C_ACT_S3_n1;
   wire C_ACT_S4_n;
+  wire C_ACT_S4_n1;
   wire C_ACT_S5_n;
+  wire C_ACT_S5_n1;
   wire C_ACT_S6_n;
+  wire C_ACT_S6_n1;
   wire C_ACT_S7_n;
+  wire C_ACT_S7_n1;
   wire clk_counter_b_n;
   wire device_sel_reg_b_n;
   wire pwm_control_b1_n;
   wire pwm_control_b1_n1;
   wire rst_cnt_b_n;
-  wire rw_flag_b;  // ../../SGPIO_DEMO_TOP.v(113)
-  wire transmit_trigger;  // ../../SGPIO_DEMO_TOP.v(110)
+  wire rw_flag_b;  // ../../SGPIO_DEMO_TOP.v(114)
+  wire transmit_trigger;  // ../../SGPIO_DEMO_TOP.v(111)
   wire transmit_trigger_n1;
   wire \u_iic_drive/mux6_syn_11 ;  // ../../i2c_master.v(365)
   wire \u_iic_drive/mux6_syn_15 ;  // ../../i2c_master.v(365)
@@ -406,26 +398,17 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
   wire \u_iic_drive/sda_out_n9 ;
   wire \u_iic_drive/wr_flag ;  // ../../i2c_master.v(40)
   wire \u_iic_drive/wr_flag_n ;
-  wire \uut/mux13_syn_27 ;  // ../../SGPIO_Controller_Slave.v(66)
-  wire \uut/mux20_syn_15 ;  // ../../SGPIO_Controller_Slave.v(85)
-  wire \uut/mux27_syn_15 ;  // ../../SGPIO_Controller_Slave.v(104)
-  wire \uut/mux6_syn_27 ;  // ../../SGPIO_Controller_Slave.v(47)
+  wire \uut/mux13_syn_27 ;  // ../../SGPIO_Controller_Slave.v(56)
+  wire \uut/mux6_syn_27 ;  // ../../SGPIO_Controller_Slave.v(37)
   wire \uut/bit_count_0_b1_n ;
+  wire \uut/bit_count_0_b1_n1 ;
   wire \uut/bit_count_0_b_n ;
-  wire \uut/bit_count_0_b_n1 ;
-  wire \uut/bit_count_0_b_n2 ;
-  wire \uut/bit_count_0_local_b1_n ;
-  wire \uut/bit_count_0_local_b_n ;
-  wire \uut/bit_count_0_local_b_n1 ;
   wire \uut/bit_count_1_b1_n ;
+  wire \uut/bit_count_1_b1_n1 ;
   wire \uut/bit_count_1_b_n ;
-  wire \uut/bit_count_1_b_n1 ;
-  wire \uut/bit_count_1_b_n2 ;
-  wire \uut/bit_count_1_local_b1_n ;
-  wire \uut/bit_count_1_local_b_n ;
-  wire \uut/bit_count_1_local_b_n1 ;
 
-  not C_ACT_S0_i (C_ACT_S0_n, \uut/sgpio_0_data_out [23]);  // ../../SGPIO_DEMO_TOP.v(199)
+  not C_ACT_S0_i (C_ACT_S0_n, C_ACT_S0_n1);  // ../../SGPIO_DEMO_TOP.v(210)
+  and C_ACT_S0_i1 (C_ACT_S0_n1, \uut/sgpio_0_data_out [23], ACT_S0);  // ../../SGPIO_DEMO_TOP.v(210)
   AL_LATCH_X C_ACT_S0_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -435,7 +418,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(C_ACT_S0));  // ../../SGPIO_DEMO_TOP.v(185)
-  not C_ACT_S1_i (C_ACT_S1_n, \uut/sgpio_0_data_out [20]);  // ../../SGPIO_DEMO_TOP.v(200)
+  not C_ACT_S1_i (C_ACT_S1_n, C_ACT_S1_n1);  // ../../SGPIO_DEMO_TOP.v(211)
+  and C_ACT_S1_i1 (C_ACT_S1_n1, \uut/sgpio_0_data_out [20], ACT_S1);  // ../../SGPIO_DEMO_TOP.v(211)
   AL_LATCH_X C_ACT_S1_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -445,7 +429,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(C_ACT_S1));  // ../../SGPIO_DEMO_TOP.v(185)
-  not C_ACT_S2_i (C_ACT_S2_n, \uut/sgpio_0_data_out [17]);  // ../../SGPIO_DEMO_TOP.v(201)
+  not C_ACT_S2_i (C_ACT_S2_n, C_ACT_S2_n1);  // ../../SGPIO_DEMO_TOP.v(212)
+  and C_ACT_S2_i1 (C_ACT_S2_n1, \uut/sgpio_0_data_out [17], ACT_S2);  // ../../SGPIO_DEMO_TOP.v(212)
   AL_LATCH_X C_ACT_S2_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -455,7 +440,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(C_ACT_S2));  // ../../SGPIO_DEMO_TOP.v(185)
-  not C_ACT_S3_i (C_ACT_S3_n, \uut/sgpio_0_data_out [14]);  // ../../SGPIO_DEMO_TOP.v(202)
+  not C_ACT_S3_i (C_ACT_S3_n, C_ACT_S3_n1);  // ../../SGPIO_DEMO_TOP.v(213)
+  and C_ACT_S3_i1 (C_ACT_S3_n1, \uut/sgpio_0_data_out [14], ACT_S3);  // ../../SGPIO_DEMO_TOP.v(213)
   AL_LATCH_X C_ACT_S3_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -465,7 +451,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(C_ACT_S3));  // ../../SGPIO_DEMO_TOP.v(185)
-  not C_ACT_S4_i (C_ACT_S4_n, \uut/sgpio_1_data_out [23]);  // ../../SGPIO_DEMO_TOP.v(205)
+  not C_ACT_S4_i (C_ACT_S4_n, C_ACT_S4_n1);  // ../../SGPIO_DEMO_TOP.v(215)
+  and C_ACT_S4_i1 (C_ACT_S4_n1, \uut/sgpio_1_data_out [23], ACT_S4);  // ../../SGPIO_DEMO_TOP.v(215)
   AL_LATCH_X C_ACT_S4_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -475,7 +462,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(C_ACT_S4));  // ../../SGPIO_DEMO_TOP.v(185)
-  not C_ACT_S5_i (C_ACT_S5_n, \uut/sgpio_1_data_out [20]);  // ../../SGPIO_DEMO_TOP.v(206)
+  not C_ACT_S5_i (C_ACT_S5_n, C_ACT_S5_n1);  // ../../SGPIO_DEMO_TOP.v(216)
+  and C_ACT_S5_i1 (C_ACT_S5_n1, \uut/sgpio_1_data_out [20], ACT_S5);  // ../../SGPIO_DEMO_TOP.v(216)
   AL_LATCH_X C_ACT_S5_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -485,7 +473,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(C_ACT_S5));  // ../../SGPIO_DEMO_TOP.v(185)
-  not C_ACT_S6_i (C_ACT_S6_n, \uut/sgpio_1_data_out [17]);  // ../../SGPIO_DEMO_TOP.v(207)
+  not C_ACT_S6_i (C_ACT_S6_n, C_ACT_S6_n1);  // ../../SGPIO_DEMO_TOP.v(217)
+  and C_ACT_S6_i1 (C_ACT_S6_n1, \uut/sgpio_1_data_out [17], ACT_S6);  // ../../SGPIO_DEMO_TOP.v(217)
   AL_LATCH_X C_ACT_S6_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -495,7 +484,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(C_ACT_S6));  // ../../SGPIO_DEMO_TOP.v(185)
-  not C_ACT_S7_i (C_ACT_S7_n, \uut/sgpio_1_data_out [14]);  // ../../SGPIO_DEMO_TOP.v(208)
+  not C_ACT_S7_i (C_ACT_S7_n, C_ACT_S7_n1);  // ../../SGPIO_DEMO_TOP.v(218)
+  and C_ACT_S7_i1 (C_ACT_S7_n1, \uut/sgpio_1_data_out [14], ACT_S7);  // ../../SGPIO_DEMO_TOP.v(218)
   AL_LATCH_X C_ACT_S7_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -507,168 +497,168 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .q(C_ACT_S7));  // ../../SGPIO_DEMO_TOP.v(185)
   AL_MUX C_LOCATE_S0_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_0_data_out_local [10]),
+    .i1(\uut/sgpio_0_data_out [22]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S0));  // ../../SGPIO_DEMO_TOP.v(186)
   AL_MUX C_LOCATE_S1_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_0_data_out_local [7]),
+    .i1(\uut/sgpio_0_data_out [19]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S1));  // ../../SGPIO_DEMO_TOP.v(186)
   AL_MUX C_LOCATE_S2_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_0_data_out_local [4]),
+    .i1(\uut/sgpio_0_data_out [16]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S2));  // ../../SGPIO_DEMO_TOP.v(186)
   AL_MUX C_LOCATE_S3_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_0_data_out_local [1]),
+    .i1(\uut/sgpio_0_data_out [13]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S3));  // ../../SGPIO_DEMO_TOP.v(186)
   AL_MUX C_LOCATE_S4_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_1_data_out_local [10]),
+    .i1(\uut/sgpio_1_data_out [22]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S4));  // ../../SGPIO_DEMO_TOP.v(186)
   AL_MUX C_LOCATE_S5_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_1_data_out_local [7]),
+    .i1(\uut/sgpio_1_data_out [19]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S5));  // ../../SGPIO_DEMO_TOP.v(186)
   AL_MUX C_LOCATE_S6_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_1_data_out_local [4]),
+    .i1(\uut/sgpio_1_data_out [16]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S6));  // ../../SGPIO_DEMO_TOP.v(186)
   AL_MUX C_LOCATE_S7_i (
     .i0(1'b0),
-    .i1(\uut/sgpio_1_data_out_local [1]),
+    .i1(\uut/sgpio_1_data_out [13]),
     .sel(transmit_trigger),
     .o(C_LOCATE_S7));  // ../../SGPIO_DEMO_TOP.v(186)
   add_pu27_pu27_o27 add0 (
     .i0(clk_counter),
     .i1(27'b000000000000000000000000001),
-    .o(clk_counter_b1));  // ../../SGPIO_DEMO_TOP.v(126)
+    .o(clk_counter_b1));  // ../../SGPIO_DEMO_TOP.v(127)
   add_pu1_pu1_o1 add1 (
     .i0(device_sel_reg[0]),
     .i1(1'b1),
-    .o(device_sel_reg_b1[0]));  // ../../SGPIO_DEMO_TOP.v(143)
+    .o(device_sel_reg_b1[0]));  // ../../SGPIO_DEMO_TOP.v(144)
   add_pu16_pu16_o16 add2 (
     .i0({poll_counter[15:1],clk_counter[0]}),
     .i1(16'b0000000000000001),
-    .o({poll_counter_b1[15:1],open_n0}));  // ../../SGPIO_DEMO_TOP.v(146)
+    .o({poll_counter_b1[15:1],open_n0}));  // ../../SGPIO_DEMO_TOP.v(147)
   add_pu16_pu16_o16 add3 (
     .i0(rst_cnt),
     .i1(16'b0000000000000001),
     .o(rst_cnt_b1));  // ../../SGPIO_DEMO_TOP.v(77)
-  not device_addr_b_i (device_addr_b[5], rw_flag_b);  // ../../SGPIO_DEMO_TOP.v(173)
+  not device_addr_b_i (device_addr_b[5], rw_flag_b);  // ../../SGPIO_DEMO_TOP.v(174)
   eq_w27 eq0 (
     .i0(clk_counter),
     .i1(27'b000101111101011110000011111),
-    .o(clk_counter_b_n));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b_n));  // ../../SGPIO_DEMO_TOP.v(122)
   eq_w16 eq1 (
     .i0({poll_counter[15:1],clk_counter[0]}),
     .i1(16'b0000000000110001),
-    .o(device_sel_reg_b_n));  // ../../SGPIO_DEMO_TOP.v(141)
+    .o(device_sel_reg_b_n));  // ../../SGPIO_DEMO_TOP.v(142)
   eq_w16 eq2 (
     .i0(rst_cnt),
     .i1(16'b0010011100001111),
     .o(rst_cnt_b_n));  // ../../SGPIO_DEMO_TOP.v(73)
-  lt_u8_u8 lt0 (
+  lt_u5_u5 lt0 (
     .ci(1'b0),
-    .i0(8'b10000000),
-    .i1(rdata),
-    .o(pwm_control_b1_n1));  // ../../SGPIO_DEMO_TOP.v(292)
+    .i0(5'b00110),
+    .i1(rdata[7:3]),
+    .o(pwm_control_b1_n1));  // ../../SGPIO_DEMO_TOP.v(355)
   lt_u8_u8 lt1 (
     .ci(1'b0),
-    .i0(8'b00101000),
+    .i0(8'b00011110),
     .i1(rdata),
-    .o(pwm_control_b1_n));  // ../../SGPIO_DEMO_TOP.v(294)
+    .o(pwm_control_b1_n));  // ../../SGPIO_DEMO_TOP.v(357)
   binary_mux_s1_w1 mux2_syn_1 (
     .i0(clk_counter_b1[0]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[0]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[0]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_11 (
     .i0(clk_counter_b1[10]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[10]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[10]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_12 (
     .i0(clk_counter_b1[11]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[11]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[11]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_13 (
     .i0(clk_counter_b1[12]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[12]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[12]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_14 (
     .i0(clk_counter_b1[13]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[13]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[13]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_16 (
     .i0(clk_counter_b1[15]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[15]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[15]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_18 (
     .i0(clk_counter_b1[17]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[17]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[17]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_19 (
     .i0(clk_counter_b1[18]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[18]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[18]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_20 (
     .i0(clk_counter_b1[19]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[19]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[19]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_21 (
     .i0(clk_counter_b1[20]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[20]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[20]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_22 (
     .i0(clk_counter_b1[21]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[21]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[21]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_24 (
     .i0(clk_counter_b1[23]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[23]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[23]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux2_syn_6 (
     .i0(clk_counter_b1[5]),
     .i1(1'b0),
     .sel(clk_counter_b_n),
-    .o(clk_counter_b[5]));  // ../../SGPIO_DEMO_TOP.v(121)
+    .o(clk_counter_b[5]));  // ../../SGPIO_DEMO_TOP.v(122)
   binary_mux_s1_w1 mux3_syn_2 (
     .i0(poll_counter_b1[1]),
     .i1(1'b0),
     .sel(device_sel_reg_b_n),
-    .o(poll_counter_b[1]));  // ../../SGPIO_DEMO_TOP.v(141)
+    .o(poll_counter_b[1]));  // ../../SGPIO_DEMO_TOP.v(142)
   binary_mux_s1_w1 mux3_syn_5 (
     .i0(poll_counter_b1[4]),
     .i1(1'b0),
     .sel(device_sel_reg_b_n),
-    .o(poll_counter_b[4]));  // ../../SGPIO_DEMO_TOP.v(141)
+    .o(poll_counter_b[4]));  // ../../SGPIO_DEMO_TOP.v(142)
   binary_mux_s1_w1 mux3_syn_6 (
     .i0(poll_counter_b1[5]),
     .i1(1'b0),
     .sel(device_sel_reg_b_n),
-    .o(poll_counter_b[5]));  // ../../SGPIO_DEMO_TOP.v(141)
+    .o(poll_counter_b[5]));  // ../../SGPIO_DEMO_TOP.v(142)
   binary_mux_s1_w1 mux6_syn_1 (
     .i0(device_sel_reg[0]),
     .i1(1'b0),
     .sel(rw_flag_b),
-    .o(device_reg_addr_b[0]));  // ../../SGPIO_DEMO_TOP.v(173)
+    .o(device_reg_addr_b[0]));  // ../../SGPIO_DEMO_TOP.v(174)
   binary_mux_s1_w1 mux7_syn_1 (
     .i0(rst_cnt_b1[0]),
     .i1(1'b1),
@@ -697,7 +687,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[8]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[8]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_11 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -706,7 +696,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[9]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[9]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_12 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -715,7 +705,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[10]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[10]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_13 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -724,7 +714,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[11]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[11]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_14 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -733,7 +723,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[12]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[12]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_15 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -742,7 +732,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[13]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[13]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_16 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -751,7 +741,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[14]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[14]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_17 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -760,7 +750,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[15]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[15]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_18 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -769,7 +759,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[16]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[16]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_19 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -778,7 +768,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[17]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[17]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_2 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -787,7 +777,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[0]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[0]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_20 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -796,7 +786,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[18]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[18]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_21 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -805,7 +795,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[19]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[19]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_22 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -814,7 +804,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[20]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[20]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_23 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -823,7 +813,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[21]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[21]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_24 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -832,7 +822,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[22]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[22]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_25 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -841,7 +831,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[23]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[23]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_26 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -850,7 +840,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[24]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[24]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_27 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -859,7 +849,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[25]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[25]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_28 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -868,7 +858,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[26]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[26]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_3 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -877,7 +867,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[1]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[1]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_4 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -886,7 +876,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[2]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[2]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_5 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -895,7 +885,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[3]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[3]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_6 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -904,7 +894,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[4]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[4]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_7 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -913,7 +903,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[5]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[5]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_8 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -922,7 +912,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[6]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[6]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg0_syn_9 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -931,7 +921,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(clk_counter[7]));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(clk_counter[7]));  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 reg1_syn_10 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -940,7 +930,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\u_iic_drive/device_addr [2]));  // ../../SGPIO_DEMO_TOP.v(169)
+    .q(\u_iic_drive/device_addr [2]));  // ../../SGPIO_DEMO_TOP.v(170)
   AL_DFF_0 reg1_syn_11 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -949,7 +939,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\u_iic_drive/device_addr [5]));  // ../../SGPIO_DEMO_TOP.v(169)
+    .q(\u_iic_drive/device_addr [5]));  // ../../SGPIO_DEMO_TOP.v(170)
   AL_DFF_0 reg1_syn_9 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -958,7 +948,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\u_iic_drive/device_addr [0]));  // ../../SGPIO_DEMO_TOP.v(169)
+    .q(\u_iic_drive/device_addr [0]));  // ../../SGPIO_DEMO_TOP.v(170)
   AL_DFF_0 reg2_syn_10 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -967,7 +957,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(device_reg_addr[0]));  // ../../SGPIO_DEMO_TOP.v(169)
+    .q(device_reg_addr[0]));  // ../../SGPIO_DEMO_TOP.v(170)
   AL_DFF_0 reg3_syn_2 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -976,7 +966,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(device_sel_reg_b_n),
     .sr(1'b0),
     .ss(1'b0),
-    .q(device_sel_reg[0]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(device_sel_reg[0]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_10 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -985,7 +975,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[8]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[8]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_11 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -994,7 +984,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[9]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[9]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_12 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1003,7 +993,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[10]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[10]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_13 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1012,7 +1002,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[11]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[11]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_14 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1021,7 +1011,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[12]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[12]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_15 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1030,7 +1020,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[13]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[13]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_16 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1039,7 +1029,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[14]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[14]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_17 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1048,7 +1038,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[15]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[15]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_3 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1057,7 +1047,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[1]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[1]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_4 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1066,7 +1056,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[2]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[2]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_5 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1075,7 +1065,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[3]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[3]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_6 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1084,7 +1074,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[4]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[4]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_7 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1093,7 +1083,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[5]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[5]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_8 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1102,7 +1092,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[6]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[6]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg4_syn_9 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1111,7 +1101,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(poll_counter[7]));  // ../../SGPIO_DEMO_TOP.v(135)
+    .q(poll_counter[7]));  // ../../SGPIO_DEMO_TOP.v(136)
   AL_DFF_0 reg5_syn_10 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1120,7 +1110,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(transmit_trigger),
     .sr(1'b0),
     .ss(1'b0),
-    .q(pwm_control[0]));  // ../../SGPIO_DEMO_TOP.v(304)
+    .q(pwm_control[0]));  // ../../SGPIO_DEMO_TOP.v(367)
   AL_DFF_0 reg5_syn_11 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1129,7 +1119,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(transmit_trigger),
     .sr(1'b0),
     .ss(1'b0),
-    .q(pwm_control[5]));  // ../../SGPIO_DEMO_TOP.v(304)
+    .q(pwm_control[5]));  // ../../SGPIO_DEMO_TOP.v(367)
   AL_DFF_0 reg6_syn_10 (
     .ar(1'b0),
     .as(1'b0),
@@ -1274,7 +1264,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .sr(1'b0),
     .ss(1'b0),
     .q(rst_cnt[7]));  // ../../SGPIO_DEMO_TOP.v(72)
-  and rw_flag_b_i_syn_2 (rw_flag_b_i_syn_3, rst_cnt_b_n, clk_counter_b_n);  // ../../SGPIO_DEMO_TOP.v(117)
+  and rw_flag_b_i_syn_2 (rw_flag_b_i_syn_3, rst_cnt_b_n, clk_counter_b_n);  // ../../SGPIO_DEMO_TOP.v(118)
   AL_DFF_0 rw_flag_b_reg (
     .ar(1'b0),
     .as(1'b0),
@@ -1283,8 +1273,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(rw_flag_b_i_syn_3),
     .sr(1'b0),
     .ss(1'b0),
-    .q(rw_flag_b));  // ../../SGPIO_DEMO_TOP.v(117)
-  not transmit_trigger_i1 (transmit_trigger_n1, transmit_trigger);  // ../../SGPIO_DEMO_TOP.v(123)
+    .q(rw_flag_b));  // ../../SGPIO_DEMO_TOP.v(118)
+  not transmit_trigger_i1 (transmit_trigger_n1, transmit_trigger);  // ../../SGPIO_DEMO_TOP.v(124)
   AL_DFF_0 transmit_trigger_reg_syn_2 (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -1293,7 +1283,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(clk_counter_b_n),
     .sr(1'b0),
     .ss(1'b0),
-    .q(transmit_trigger));  // ../../SGPIO_DEMO_TOP.v(117)
+    .q(transmit_trigger));  // ../../SGPIO_DEMO_TOP.v(118)
   add_pu8_pu8_o8 \u_iic_drive/add0  (
     .i0(\u_iic_drive/div_cnt ),
     .i1(8'b00000001),
@@ -2412,939 +2402,575 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .ss(1'b0),
     .q(\u_iic_drive/wr_flag ));  // ../../i2c_master.v(192)
   add_pu5_pu5_o5 \uut/add0  (
-    .i0(\uut/bit_count_0 ),
-    .i1(5'b00001),
-    .o(\uut/bit_count_0_b2 ));  // ../../SGPIO_Controller_Slave.v(54)
-  add_pu5_pu5_o5 \uut/add1  (
     .i0(\uut/bit_count_1 ),
     .i1(5'b00001),
-    .o(\uut/bit_count_1_b2 ));  // ../../SGPIO_Controller_Slave.v(73)
-  add_pu4_pu4_o4 \uut/add2  (
-    .i0(\uut/bit_count_0_local ),
-    .i1(4'b0001),
-    .o(\uut/bit_count_0_local_b2 ));  // ../../SGPIO_Controller_Slave.v(92)
-  add_pu4_pu4_o4 \uut/add3  (
-    .i0(\uut/bit_count_1_local ),
-    .i1(4'b0001),
-    .o(\uut/bit_count_1_local_b2 ));  // ../../SGPIO_Controller_Slave.v(111)
-  and \uut/bit_count_0_b_i  (\uut/bit_count_0_b_n , \uut/bit_count_0_b_n1 , \uut/bit_count_0_b_n2 );  // ../../SGPIO_Controller_Slave.v(52)
-  not \uut/bit_count_0_b_i1  (\uut/bit_count_0_b_n2 , SLOAD_SGPIO_0);  // ../../SGPIO_Controller_Slave.v(52)
-  and \uut/bit_count_0_local_b_i  (\uut/bit_count_0_local_b_n , \uut/bit_count_0_local_b_n1 , \uut/bit_count_0_b_n2 );  // ../../SGPIO_Controller_Slave.v(90)
-  and \uut/bit_count_1_b_i  (\uut/bit_count_1_b_n , \uut/bit_count_1_b_n1 , \uut/bit_count_1_b_n2 );  // ../../SGPIO_Controller_Slave.v(71)
-  not \uut/bit_count_1_b_i1  (\uut/bit_count_1_b_n2 , SLOAD_SGPIO_1);  // ../../SGPIO_Controller_Slave.v(71)
-  and \uut/bit_count_1_local_b_i  (\uut/bit_count_1_local_b_n , \uut/bit_count_1_local_b_n1 , \uut/bit_count_1_b_n2 );  // ../../SGPIO_Controller_Slave.v(109)
+    .o(\uut/bit_count_1_b2 ));  // ../../SGPIO_Controller_Slave.v(63)
+  add_pu5_pu5_o5 \uut/add3  (
+    .i0(\uut/bit_count_0 ),
+    .i1(5'b00001),
+    .o(\uut/bit_count_0_b2 ));  // ../../SGPIO_Controller_Slave.v(44)
+  and \uut/bit_count_0_b1_i  (\uut/bit_count_0_b1_n , \uut/bit_count_0_b1_n1 , SLOAD_SGPIO_0);  // ../../SGPIO_Controller_Slave.v(47)
+  and \uut/bit_count_1_b1_i  (\uut/bit_count_1_b1_n , \uut/bit_count_1_b1_n1 , SLOAD_SGPIO_1);  // ../../SGPIO_Controller_Slave.v(66)
   eq_w5 \uut/eq0  (
-    .i0(\uut/bit_count_0 ),
-    .i1(5'b10111),
-    .o(\uut/bit_count_0_b1_n ));  // ../../SGPIO_Controller_Slave.v(57)
-  eq_w5 \uut/eq1  (
     .i0(\uut/bit_count_1 ),
     .i1(5'b10111),
-    .o(\uut/bit_count_1_b1_n ));  // ../../SGPIO_Controller_Slave.v(76)
-  eq_w4 \uut/eq2  (
-    .i0(\uut/bit_count_0_local ),
-    .i1(4'b1011),
-    .o(\uut/bit_count_0_local_b1_n ));  // ../../SGPIO_Controller_Slave.v(95)
-  eq_w4 \uut/eq3  (
-    .i0(\uut/bit_count_1_local ),
-    .i1(4'b1011),
-    .o(\uut/bit_count_1_local_b1_n ));  // ../../SGPIO_Controller_Slave.v(114)
+    .o(\uut/bit_count_1_b1_n1 ));  // ../../SGPIO_Controller_Slave.v(66)
+  eq_w5 \uut/eq3  (
+    .i0(\uut/bit_count_0 ),
+    .i1(5'b10111),
+    .o(\uut/bit_count_0_b1_n1 ));  // ../../SGPIO_Controller_Slave.v(47)
   lt_u5_u5 \uut/lt0  (
     .ci(1'b0),
-    .i0(\uut/bit_count_0 ),
-    .i1(5'b10111),
-    .o(\uut/bit_count_0_b_n1 ));  // ../../SGPIO_Controller_Slave.v(52)
-  lt_u5_u5 \uut/lt1  (
-    .ci(1'b0),
     .i0(\uut/bit_count_1 ),
     .i1(5'b10111),
-    .o(\uut/bit_count_1_b_n1 ));  // ../../SGPIO_Controller_Slave.v(71)
-  lt_u4_u4 \uut/lt2  (
+    .o(\uut/bit_count_1_b_n ));  // ../../SGPIO_Controller_Slave.v(61)
+  lt_u5_u5 \uut/lt2  (
     .ci(1'b0),
-    .i0(\uut/bit_count_0_local ),
-    .i1(4'b1011),
-    .o(\uut/bit_count_0_local_b_n1 ));  // ../../SGPIO_Controller_Slave.v(90)
-  lt_u4_u4 \uut/lt3  (
-    .ci(1'b0),
-    .i0(\uut/bit_count_1_local ),
-    .i1(4'b1011),
-    .o(\uut/bit_count_1_local_b_n1 ));  // ../../SGPIO_Controller_Slave.v(109)
+    .i0(\uut/bit_count_0 ),
+    .i1(5'b10111),
+    .o(\uut/bit_count_0_b_n ));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux10_syn_1  (
     .i0(\uut/data_buffer_1_b1 [0]),
     .i1(DATAOUT_SGPIO_1),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [0]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [0]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_10  (
     .i0(\uut/data_buffer_1_b1 [9]),
     .i1(\uut/data_buffer_1 [8]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [9]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [9]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_11  (
     .i0(\uut/data_buffer_1_b1 [10]),
     .i1(\uut/data_buffer_1 [9]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [10]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [10]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_12  (
     .i0(\uut/data_buffer_1_b1 [11]),
     .i1(\uut/data_buffer_1 [10]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [11]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [11]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_13  (
     .i0(\uut/data_buffer_1_b1 [12]),
     .i1(\uut/data_buffer_1 [11]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [12]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [12]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_14  (
     .i0(\uut/data_buffer_1_b1 [13]),
     .i1(\uut/data_buffer_1 [12]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [13]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [13]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_15  (
     .i0(\uut/data_buffer_1_b1 [14]),
     .i1(\uut/data_buffer_1 [13]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [14]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [14]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_16  (
     .i0(\uut/data_buffer_1_b1 [15]),
     .i1(\uut/data_buffer_1 [14]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [15]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [15]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_17  (
     .i0(\uut/data_buffer_1_b1 [16]),
     .i1(\uut/data_buffer_1 [15]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [16]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [16]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_18  (
     .i0(\uut/data_buffer_1_b1 [17]),
     .i1(\uut/data_buffer_1 [16]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [17]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [17]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_19  (
     .i0(\uut/data_buffer_1_b1 [18]),
     .i1(\uut/data_buffer_1 [17]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [18]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [18]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_2  (
     .i0(\uut/data_buffer_1_b1 [1]),
     .i1(\uut/data_buffer_1 [0]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [1]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [1]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_20  (
     .i0(\uut/data_buffer_1_b1 [19]),
     .i1(\uut/data_buffer_1 [18]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [19]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [19]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_21  (
     .i0(\uut/data_buffer_1_b1 [20]),
     .i1(\uut/data_buffer_1 [19]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [20]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [20]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_22  (
     .i0(\uut/data_buffer_1_b1 [21]),
     .i1(\uut/data_buffer_1 [20]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [21]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [21]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_23  (
     .i0(\uut/data_buffer_1_b1 [22]),
     .i1(\uut/data_buffer_1 [21]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [22]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [22]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_3  (
     .i0(\uut/data_buffer_1_b1 [2]),
     .i1(\uut/data_buffer_1 [1]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [2]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [2]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_4  (
     .i0(\uut/data_buffer_1_b1 [3]),
     .i1(\uut/data_buffer_1 [2]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [3]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [3]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_5  (
     .i0(\uut/data_buffer_1_b1 [4]),
     .i1(\uut/data_buffer_1 [3]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [4]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [4]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_6  (
     .i0(\uut/data_buffer_1_b1 [5]),
     .i1(\uut/data_buffer_1 [4]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [5]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [5]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_7  (
     .i0(\uut/data_buffer_1_b1 [6]),
     .i1(\uut/data_buffer_1 [5]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [6]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [6]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_8  (
     .i0(\uut/data_buffer_1_b1 [7]),
     .i1(\uut/data_buffer_1 [6]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [7]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [7]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux10_syn_9  (
     .i0(\uut/data_buffer_1_b1 [8]),
     .i1(\uut/data_buffer_1 [7]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/data_buffer_1_b [8]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/data_buffer_1_b [8]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux11_syn_1  (
     .i0(\uut/bit_count_1_b1 [0]),
     .i1(\uut/bit_count_1_b2 [0]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/bit_count_1_b [0]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/bit_count_1_b [0]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux11_syn_2  (
     .i0(\uut/bit_count_1_b1 [1]),
     .i1(\uut/bit_count_1_b2 [1]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/bit_count_1_b [1]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/bit_count_1_b [1]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux11_syn_3  (
     .i0(\uut/bit_count_1_b1 [2]),
     .i1(\uut/bit_count_1_b2 [2]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/bit_count_1_b [2]));  // ../../SGPIO_Controller_Slave.v(71)
+    .o(\uut/bit_count_1_b [2]));  // ../../SGPIO_Controller_Slave.v(61)
   binary_mux_s1_w1 \uut/mux11_syn_5  (
     .i0(\uut/bit_count_1_b1 [4]),
     .i1(\uut/bit_count_1_b2 [4]),
     .sel(\uut/bit_count_1_b_n ),
-    .o(\uut/bit_count_1_b [4]));  // ../../SGPIO_Controller_Slave.v(71)
-  and \uut/mux13_syn_26  (\uut/mux13_syn_27 , rst_cnt_b_n, \uut/bit_count_1_b1_n );  // ../../SGPIO_Controller_Slave.v(66)
-  binary_mux_s1_w1 \uut/mux15_syn_1  (
-    .i0(\uut/bit_count_0_local [0]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/bit_count_0_local_b1 [0]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux15_syn_2  (
-    .i0(\uut/bit_count_0_local [1]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/bit_count_0_local_b1 [1]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux15_syn_4  (
-    .i0(\uut/bit_count_0_local [3]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/bit_count_0_local_b1 [3]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_1  (
-    .i0(\uut/data_buffer_0_local [0]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [0]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_10  (
-    .i0(\uut/data_buffer_0_local [9]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [9]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_2  (
-    .i0(\uut/data_buffer_0_local [1]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [1]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_3  (
-    .i0(\uut/data_buffer_0_local [2]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [2]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_4  (
-    .i0(\uut/data_buffer_0_local [3]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [3]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_5  (
-    .i0(\uut/data_buffer_0_local [4]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [4]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_6  (
-    .i0(\uut/data_buffer_0_local [5]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [5]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_7  (
-    .i0(\uut/data_buffer_0_local [6]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [6]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_8  (
-    .i0(\uut/data_buffer_0_local [7]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [7]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux16_syn_9  (
-    .i0(\uut/data_buffer_0_local [8]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_0_local_b1_n ),
-    .o(\uut/data_buffer_0_local_b1 [8]));  // ../../SGPIO_Controller_Slave.v(95)
-  binary_mux_s1_w1 \uut/mux17_syn_1  (
-    .i0(\uut/data_buffer_0_local_b1 [0]),
-    .i1(DATAOUT_SGPIO_0),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [0]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_10  (
-    .i0(\uut/data_buffer_0_local_b1 [9]),
-    .i1(\uut/data_buffer_0_local [8]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [9]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_2  (
-    .i0(\uut/data_buffer_0_local_b1 [1]),
-    .i1(\uut/data_buffer_0_local [0]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [1]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_3  (
-    .i0(\uut/data_buffer_0_local_b1 [2]),
-    .i1(\uut/data_buffer_0_local [1]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [2]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_4  (
-    .i0(\uut/data_buffer_0_local_b1 [3]),
-    .i1(\uut/data_buffer_0_local [2]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [3]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_5  (
-    .i0(\uut/data_buffer_0_local_b1 [4]),
-    .i1(\uut/data_buffer_0_local [3]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [4]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_6  (
-    .i0(\uut/data_buffer_0_local_b1 [5]),
-    .i1(\uut/data_buffer_0_local [4]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [5]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_7  (
-    .i0(\uut/data_buffer_0_local_b1 [6]),
-    .i1(\uut/data_buffer_0_local [5]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [6]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_8  (
-    .i0(\uut/data_buffer_0_local_b1 [7]),
-    .i1(\uut/data_buffer_0_local [6]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [7]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux17_syn_9  (
-    .i0(\uut/data_buffer_0_local_b1 [8]),
-    .i1(\uut/data_buffer_0_local [7]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/data_buffer_0_local_b [8]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux18_syn_1  (
-    .i0(\uut/bit_count_0_local_b1 [0]),
-    .i1(\uut/bit_count_0_local_b2 [0]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/bit_count_0_local_b [0]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux18_syn_2  (
-    .i0(\uut/bit_count_0_local_b1 [1]),
-    .i1(\uut/bit_count_0_local_b2 [1]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/bit_count_0_local_b [1]));  // ../../SGPIO_Controller_Slave.v(90)
-  binary_mux_s1_w1 \uut/mux18_syn_4  (
-    .i0(\uut/bit_count_0_local_b1 [3]),
-    .i1(\uut/bit_count_0_local_b2 [3]),
-    .sel(\uut/bit_count_0_local_b_n ),
-    .o(\uut/bit_count_0_local_b [3]));  // ../../SGPIO_Controller_Slave.v(90)
+    .o(\uut/bit_count_1_b [4]));  // ../../SGPIO_Controller_Slave.v(61)
+  and \uut/mux13_syn_26  (\uut/mux13_syn_27 , rst_cnt_b_n, \uut/bit_count_1_b1_n );  // ../../SGPIO_Controller_Slave.v(56)
   binary_mux_s1_w1 \uut/mux1_syn_1  (
     .i0(\uut/bit_count_0 [0]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/bit_count_0_b1 [0]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/bit_count_0_b1 [0]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux1_syn_2  (
     .i0(\uut/bit_count_0 [1]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/bit_count_0_b1 [1]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/bit_count_0_b1 [1]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux1_syn_3  (
     .i0(\uut/bit_count_0 [2]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/bit_count_0_b1 [2]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/bit_count_0_b1 [2]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux1_syn_5  (
     .i0(\uut/bit_count_0 [4]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/bit_count_0_b1 [4]));  // ../../SGPIO_Controller_Slave.v(57)
-  and \uut/mux20_syn_14  (\uut/mux20_syn_15 , rst_cnt_b_n, \uut/bit_count_0_local_b1_n );  // ../../SGPIO_Controller_Slave.v(85)
-  binary_mux_s1_w1 \uut/mux22_syn_1  (
-    .i0(\uut/bit_count_1_local [0]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/bit_count_1_local_b1 [0]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux22_syn_2  (
-    .i0(\uut/bit_count_1_local [1]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/bit_count_1_local_b1 [1]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux22_syn_4  (
-    .i0(\uut/bit_count_1_local [3]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/bit_count_1_local_b1 [3]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_1  (
-    .i0(\uut/data_buffer_1_local [0]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [0]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_10  (
-    .i0(\uut/data_buffer_1_local [9]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [9]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_2  (
-    .i0(\uut/data_buffer_1_local [1]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [1]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_3  (
-    .i0(\uut/data_buffer_1_local [2]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [2]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_4  (
-    .i0(\uut/data_buffer_1_local [3]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [3]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_5  (
-    .i0(\uut/data_buffer_1_local [4]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [4]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_6  (
-    .i0(\uut/data_buffer_1_local [5]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [5]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_7  (
-    .i0(\uut/data_buffer_1_local [6]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [6]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_8  (
-    .i0(\uut/data_buffer_1_local [7]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [7]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux23_syn_9  (
-    .i0(\uut/data_buffer_1_local [8]),
-    .i1(1'b0),
-    .sel(\uut/bit_count_1_local_b1_n ),
-    .o(\uut/data_buffer_1_local_b1 [8]));  // ../../SGPIO_Controller_Slave.v(114)
-  binary_mux_s1_w1 \uut/mux24_syn_1  (
-    .i0(\uut/data_buffer_1_local_b1 [0]),
-    .i1(DATAOUT_SGPIO_1),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [0]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_10  (
-    .i0(\uut/data_buffer_1_local_b1 [9]),
-    .i1(\uut/data_buffer_1_local [8]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [9]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_2  (
-    .i0(\uut/data_buffer_1_local_b1 [1]),
-    .i1(\uut/data_buffer_1_local [0]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [1]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_3  (
-    .i0(\uut/data_buffer_1_local_b1 [2]),
-    .i1(\uut/data_buffer_1_local [1]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [2]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_4  (
-    .i0(\uut/data_buffer_1_local_b1 [3]),
-    .i1(\uut/data_buffer_1_local [2]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [3]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_5  (
-    .i0(\uut/data_buffer_1_local_b1 [4]),
-    .i1(\uut/data_buffer_1_local [3]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [4]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_6  (
-    .i0(\uut/data_buffer_1_local_b1 [5]),
-    .i1(\uut/data_buffer_1_local [4]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [5]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_7  (
-    .i0(\uut/data_buffer_1_local_b1 [6]),
-    .i1(\uut/data_buffer_1_local [5]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [6]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_8  (
-    .i0(\uut/data_buffer_1_local_b1 [7]),
-    .i1(\uut/data_buffer_1_local [6]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [7]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux24_syn_9  (
-    .i0(\uut/data_buffer_1_local_b1 [8]),
-    .i1(\uut/data_buffer_1_local [7]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/data_buffer_1_local_b [8]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux25_syn_1  (
-    .i0(\uut/bit_count_1_local_b1 [0]),
-    .i1(\uut/bit_count_1_local_b2 [0]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/bit_count_1_local_b [0]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux25_syn_2  (
-    .i0(\uut/bit_count_1_local_b1 [1]),
-    .i1(\uut/bit_count_1_local_b2 [1]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/bit_count_1_local_b [1]));  // ../../SGPIO_Controller_Slave.v(109)
-  binary_mux_s1_w1 \uut/mux25_syn_4  (
-    .i0(\uut/bit_count_1_local_b1 [3]),
-    .i1(\uut/bit_count_1_local_b2 [3]),
-    .sel(\uut/bit_count_1_local_b_n ),
-    .o(\uut/bit_count_1_local_b [3]));  // ../../SGPIO_Controller_Slave.v(109)
-  and \uut/mux27_syn_14  (\uut/mux27_syn_15 , rst_cnt_b_n, \uut/bit_count_1_local_b1_n );  // ../../SGPIO_Controller_Slave.v(104)
+    .o(\uut/bit_count_0_b1 [4]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_1  (
     .i0(\uut/data_buffer_0 [0]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [0]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [0]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_10  (
     .i0(\uut/data_buffer_0 [9]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [9]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [9]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_11  (
     .i0(\uut/data_buffer_0 [10]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [10]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [10]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_12  (
     .i0(\uut/data_buffer_0 [11]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [11]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [11]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_13  (
     .i0(\uut/data_buffer_0 [12]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [12]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [12]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_14  (
     .i0(\uut/data_buffer_0 [13]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [13]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [13]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_15  (
     .i0(\uut/data_buffer_0 [14]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [14]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [14]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_16  (
     .i0(\uut/data_buffer_0 [15]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [15]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [15]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_17  (
     .i0(\uut/data_buffer_0 [16]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [16]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [16]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_18  (
     .i0(\uut/data_buffer_0 [17]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [17]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [17]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_19  (
     .i0(\uut/data_buffer_0 [18]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [18]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [18]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_2  (
     .i0(\uut/data_buffer_0 [1]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [1]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [1]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_20  (
     .i0(\uut/data_buffer_0 [19]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [19]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [19]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_21  (
     .i0(\uut/data_buffer_0 [20]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [20]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [20]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_22  (
     .i0(\uut/data_buffer_0 [21]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [21]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [21]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_23  (
     .i0(\uut/data_buffer_0 [22]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [22]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [22]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_3  (
     .i0(\uut/data_buffer_0 [2]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [2]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [2]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_4  (
     .i0(\uut/data_buffer_0 [3]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [3]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [3]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_5  (
     .i0(\uut/data_buffer_0 [4]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [4]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [4]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_6  (
     .i0(\uut/data_buffer_0 [5]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [5]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [5]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_7  (
     .i0(\uut/data_buffer_0 [6]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [6]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [6]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_8  (
     .i0(\uut/data_buffer_0 [7]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [7]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [7]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux2_syn_9  (
     .i0(\uut/data_buffer_0 [8]),
     .i1(1'b0),
     .sel(\uut/bit_count_0_b1_n ),
-    .o(\uut/data_buffer_0_b1 [8]));  // ../../SGPIO_Controller_Slave.v(57)
+    .o(\uut/data_buffer_0_b1 [8]));  // ../../SGPIO_Controller_Slave.v(47)
   binary_mux_s1_w1 \uut/mux3_syn_1  (
     .i0(\uut/data_buffer_0_b1 [0]),
     .i1(DATAOUT_SGPIO_0),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [0]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [0]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_10  (
     .i0(\uut/data_buffer_0_b1 [9]),
     .i1(\uut/data_buffer_0 [8]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [9]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [9]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_11  (
     .i0(\uut/data_buffer_0_b1 [10]),
     .i1(\uut/data_buffer_0 [9]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [10]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [10]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_12  (
     .i0(\uut/data_buffer_0_b1 [11]),
     .i1(\uut/data_buffer_0 [10]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [11]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [11]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_13  (
     .i0(\uut/data_buffer_0_b1 [12]),
     .i1(\uut/data_buffer_0 [11]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [12]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [12]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_14  (
     .i0(\uut/data_buffer_0_b1 [13]),
     .i1(\uut/data_buffer_0 [12]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [13]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [13]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_15  (
     .i0(\uut/data_buffer_0_b1 [14]),
     .i1(\uut/data_buffer_0 [13]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [14]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [14]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_16  (
     .i0(\uut/data_buffer_0_b1 [15]),
     .i1(\uut/data_buffer_0 [14]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [15]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [15]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_17  (
     .i0(\uut/data_buffer_0_b1 [16]),
     .i1(\uut/data_buffer_0 [15]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [16]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [16]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_18  (
     .i0(\uut/data_buffer_0_b1 [17]),
     .i1(\uut/data_buffer_0 [16]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [17]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [17]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_19  (
     .i0(\uut/data_buffer_0_b1 [18]),
     .i1(\uut/data_buffer_0 [17]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [18]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [18]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_2  (
     .i0(\uut/data_buffer_0_b1 [1]),
     .i1(\uut/data_buffer_0 [0]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [1]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [1]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_20  (
     .i0(\uut/data_buffer_0_b1 [19]),
     .i1(\uut/data_buffer_0 [18]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [19]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [19]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_21  (
     .i0(\uut/data_buffer_0_b1 [20]),
     .i1(\uut/data_buffer_0 [19]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [20]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [20]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_22  (
     .i0(\uut/data_buffer_0_b1 [21]),
     .i1(\uut/data_buffer_0 [20]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [21]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [21]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_23  (
     .i0(\uut/data_buffer_0_b1 [22]),
     .i1(\uut/data_buffer_0 [21]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [22]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [22]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_3  (
     .i0(\uut/data_buffer_0_b1 [2]),
     .i1(\uut/data_buffer_0 [1]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [2]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [2]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_4  (
     .i0(\uut/data_buffer_0_b1 [3]),
     .i1(\uut/data_buffer_0 [2]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [3]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [3]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_5  (
     .i0(\uut/data_buffer_0_b1 [4]),
     .i1(\uut/data_buffer_0 [3]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [4]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [4]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_6  (
     .i0(\uut/data_buffer_0_b1 [5]),
     .i1(\uut/data_buffer_0 [4]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [5]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [5]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_7  (
     .i0(\uut/data_buffer_0_b1 [6]),
     .i1(\uut/data_buffer_0 [5]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [6]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [6]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_8  (
     .i0(\uut/data_buffer_0_b1 [7]),
     .i1(\uut/data_buffer_0 [6]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [7]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [7]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux3_syn_9  (
     .i0(\uut/data_buffer_0_b1 [8]),
     .i1(\uut/data_buffer_0 [7]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/data_buffer_0_b [8]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/data_buffer_0_b [8]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux4_syn_1  (
     .i0(\uut/bit_count_0_b1 [0]),
     .i1(\uut/bit_count_0_b2 [0]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/bit_count_0_b [0]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/bit_count_0_b [0]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux4_syn_2  (
     .i0(\uut/bit_count_0_b1 [1]),
     .i1(\uut/bit_count_0_b2 [1]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/bit_count_0_b [1]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/bit_count_0_b [1]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux4_syn_3  (
     .i0(\uut/bit_count_0_b1 [2]),
     .i1(\uut/bit_count_0_b2 [2]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/bit_count_0_b [2]));  // ../../SGPIO_Controller_Slave.v(52)
+    .o(\uut/bit_count_0_b [2]));  // ../../SGPIO_Controller_Slave.v(42)
   binary_mux_s1_w1 \uut/mux4_syn_5  (
     .i0(\uut/bit_count_0_b1 [4]),
     .i1(\uut/bit_count_0_b2 [4]),
     .sel(\uut/bit_count_0_b_n ),
-    .o(\uut/bit_count_0_b [4]));  // ../../SGPIO_Controller_Slave.v(52)
-  and \uut/mux6_syn_26  (\uut/mux6_syn_27 , rst_cnt_b_n, \uut/bit_count_0_b1_n );  // ../../SGPIO_Controller_Slave.v(47)
+    .o(\uut/bit_count_0_b [4]));  // ../../SGPIO_Controller_Slave.v(42)
+  and \uut/mux6_syn_26  (\uut/mux6_syn_27 , rst_cnt_b_n, \uut/bit_count_0_b1_n );  // ../../SGPIO_Controller_Slave.v(37)
   binary_mux_s1_w1 \uut/mux8_syn_1  (
     .i0(\uut/bit_count_1 [0]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/bit_count_1_b1 [0]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/bit_count_1_b1 [0]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux8_syn_2  (
     .i0(\uut/bit_count_1 [1]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/bit_count_1_b1 [1]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/bit_count_1_b1 [1]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux8_syn_3  (
     .i0(\uut/bit_count_1 [2]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/bit_count_1_b1 [2]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/bit_count_1_b1 [2]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux8_syn_5  (
     .i0(\uut/bit_count_1 [4]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/bit_count_1_b1 [4]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/bit_count_1_b1 [4]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_1  (
     .i0(\uut/data_buffer_1 [0]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [0]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [0]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_10  (
     .i0(\uut/data_buffer_1 [9]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [9]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [9]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_11  (
     .i0(\uut/data_buffer_1 [10]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [10]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [10]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_12  (
     .i0(\uut/data_buffer_1 [11]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [11]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [11]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_13  (
     .i0(\uut/data_buffer_1 [12]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [12]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [12]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_14  (
     .i0(\uut/data_buffer_1 [13]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [13]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [13]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_15  (
     .i0(\uut/data_buffer_1 [14]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [14]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [14]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_16  (
     .i0(\uut/data_buffer_1 [15]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [15]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [15]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_17  (
     .i0(\uut/data_buffer_1 [16]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [16]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [16]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_18  (
     .i0(\uut/data_buffer_1 [17]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [17]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [17]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_19  (
     .i0(\uut/data_buffer_1 [18]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [18]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [18]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_2  (
     .i0(\uut/data_buffer_1 [1]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [1]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [1]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_20  (
     .i0(\uut/data_buffer_1 [19]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [19]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [19]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_21  (
     .i0(\uut/data_buffer_1 [20]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [20]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [20]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_22  (
     .i0(\uut/data_buffer_1 [21]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [21]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [21]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_23  (
     .i0(\uut/data_buffer_1 [22]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [22]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [22]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_3  (
     .i0(\uut/data_buffer_1 [2]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [2]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [2]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_4  (
     .i0(\uut/data_buffer_1 [3]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [3]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [3]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_5  (
     .i0(\uut/data_buffer_1 [4]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [4]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [4]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_6  (
     .i0(\uut/data_buffer_1 [5]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [5]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [5]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_7  (
     .i0(\uut/data_buffer_1 [6]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [6]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [6]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_8  (
     .i0(\uut/data_buffer_1 [7]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [7]));  // ../../SGPIO_Controller_Slave.v(76)
+    .o(\uut/data_buffer_1_b1 [7]));  // ../../SGPIO_Controller_Slave.v(66)
   binary_mux_s1_w1 \uut/mux9_syn_9  (
     .i0(\uut/data_buffer_1 [8]),
     .i1(1'b0),
     .sel(\uut/bit_count_1_b1_n ),
-    .o(\uut/data_buffer_1_b1 [8]));  // ../../SGPIO_Controller_Slave.v(76)
-  AL_DFF_0 \uut/reg0_syn_2  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/bit_count_0_local_b [0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_0_local [0]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg0_syn_3  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/bit_count_0_local_b [1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_0_local [1]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg0_syn_4  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/bit_count_0_local_b2 [2]),
-    .en(\uut/bit_count_0_local_b_n ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_0_local [2]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg0_syn_5  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/bit_count_0_local_b [3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_0_local [3]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_X \uut/reg10_syn_12  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local [9]),
-    .en(\uut/mux27_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_1_data_out_local [10]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_X \uut/reg10_syn_3  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local [0]),
-    .en(\uut/mux27_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_1_data_out_local [1]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_X \uut/reg10_syn_6  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local [3]),
-    .en(\uut/mux27_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_1_data_out_local [4]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_X \uut/reg10_syn_9  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local [6]),
-    .en(\uut/mux27_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_1_data_out_local [7]));  // ../../SGPIO_Controller_Slave.v(104)
+    .o(\uut/data_buffer_1_b1 [8]));  // ../../SGPIO_Controller_Slave.v(66)
   AL_DFF_X \uut/reg11_syn_14  (
     .ar(1'b0),
     .as(1'b0),
@@ -3353,7 +2979,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S7));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(C_ERROR_S7));  // ../../SGPIO_Controller_Slave.v(56)
+  AL_DFF_X \uut/reg11_syn_15  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_1),
+    .d(\uut/data_buffer_1 [12]),
+    .en(\uut/mux13_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_1_data_out [13]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg11_syn_16  (
     .ar(1'b0),
     .as(1'b0),
@@ -3362,7 +2997,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_1_data_out [14]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/sgpio_1_data_out [14]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg11_syn_17  (
     .ar(1'b0),
     .as(1'b0),
@@ -3371,7 +3006,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S6));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(C_ERROR_S6));  // ../../SGPIO_Controller_Slave.v(56)
+  AL_DFF_X \uut/reg11_syn_18  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_1),
+    .d(\uut/data_buffer_1 [15]),
+    .en(\uut/mux13_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_1_data_out [16]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg11_syn_19  (
     .ar(1'b0),
     .as(1'b0),
@@ -3380,7 +3024,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_1_data_out [17]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/sgpio_1_data_out [17]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg11_syn_20  (
     .ar(1'b0),
     .as(1'b0),
@@ -3389,7 +3033,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S5));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(C_ERROR_S5));  // ../../SGPIO_Controller_Slave.v(56)
+  AL_DFF_X \uut/reg11_syn_21  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_1),
+    .d(\uut/data_buffer_1 [18]),
+    .en(\uut/mux13_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_1_data_out [19]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg11_syn_22  (
     .ar(1'b0),
     .as(1'b0),
@@ -3398,7 +3051,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_1_data_out [20]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/sgpio_1_data_out [20]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg11_syn_23  (
     .ar(1'b0),
     .as(1'b0),
@@ -3407,7 +3060,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S4));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(C_ERROR_S4));  // ../../SGPIO_Controller_Slave.v(56)
+  AL_DFF_X \uut/reg11_syn_24  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_1),
+    .d(\uut/data_buffer_1 [21]),
+    .en(\uut/mux13_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_1_data_out [22]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg11_syn_25  (
     .ar(1'b0),
     .as(1'b0),
@@ -3416,8 +3078,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux13_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_1_data_out [23]));  // ../../SGPIO_Controller_Slave.v(66)
-  AL_DFF_0 \uut/reg1_syn_2  (
+    .q(\uut/sgpio_1_data_out [23]));  // ../../SGPIO_Controller_Slave.v(56)
+  AL_DFF_0 \uut/reg2_syn_2  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
     .clk(~SCL_SGPIO_0),
@@ -3425,8 +3087,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_0 [0]));  // ../../SGPIO_Controller_Slave.v(47)
-  AL_DFF_0 \uut/reg1_syn_3  (
+    .q(\uut/bit_count_0 [0]));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_0 \uut/reg2_syn_3  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
     .clk(~SCL_SGPIO_0),
@@ -3434,8 +3096,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_0 [1]));  // ../../SGPIO_Controller_Slave.v(47)
-  AL_DFF_0 \uut/reg1_syn_4  (
+    .q(\uut/bit_count_0 [1]));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_0 \uut/reg2_syn_4  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
     .clk(~SCL_SGPIO_0),
@@ -3443,8 +3105,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_0 [2]));  // ../../SGPIO_Controller_Slave.v(47)
-  AL_DFF_0 \uut/reg1_syn_5  (
+    .q(\uut/bit_count_0 [2]));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_0 \uut/reg2_syn_5  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
     .clk(~SCL_SGPIO_0),
@@ -3452,8 +3114,8 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/bit_count_0_b_n ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_0 [3]));  // ../../SGPIO_Controller_Slave.v(47)
-  AL_DFF_0 \uut/reg1_syn_6  (
+    .q(\uut/bit_count_0 [3]));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_0 \uut/reg2_syn_6  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
     .clk(~SCL_SGPIO_0),
@@ -3461,43 +3123,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_0 [4]));  // ../../SGPIO_Controller_Slave.v(47)
-  AL_DFF_0 \uut/reg2_syn_2  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/bit_count_1_local_b [0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_1_local [0]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg2_syn_3  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/bit_count_1_local_b [1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_1_local [1]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg2_syn_4  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/bit_count_1_local_b2 [2]),
-    .en(\uut/bit_count_1_local_b_n ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_1_local [2]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg2_syn_5  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/bit_count_1_local_b [3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/bit_count_1_local [3]));  // ../../SGPIO_Controller_Slave.v(104)
+    .q(\uut/bit_count_0 [4]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg3_syn_2  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3506,7 +3132,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_1 [0]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/bit_count_1 [0]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg3_syn_3  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3515,7 +3141,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_1 [1]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/bit_count_1 [1]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg3_syn_4  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3524,7 +3150,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_1 [2]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/bit_count_1 [2]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg3_syn_5  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3533,7 +3159,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/bit_count_1_b_n ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_1 [3]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/bit_count_1 [3]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg3_syn_6  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3542,97 +3168,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/bit_count_1 [4]));  // ../../SGPIO_Controller_Slave.v(66)
-  AL_DFF_0 \uut/reg4_syn_10  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [8]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_11  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [9]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_2  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [0]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_3  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [1]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_4  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [2]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_5  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [3]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_6  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [4]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_7  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [5]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_8  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [6]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_0 \uut/reg4_syn_9  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local_b [7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_0_local [7]));  // ../../SGPIO_Controller_Slave.v(85)
+    .q(\uut/bit_count_1 [4]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg5_syn_10  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3641,7 +3177,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [8]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [8]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_11  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3650,7 +3186,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [9]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [9]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_12  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3659,7 +3195,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [10]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [10]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_13  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3668,7 +3204,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [11]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [11]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_14  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3677,7 +3213,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [12]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [12]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_15  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3686,7 +3222,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [13]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [13]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_16  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3695,7 +3231,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [14]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [14]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_17  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3704,7 +3240,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [15]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [15]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_18  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3713,7 +3249,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [16]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [16]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_19  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3722,7 +3258,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [17]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [17]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_2  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3731,7 +3267,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [0]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [0]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_20  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3740,7 +3276,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [18]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [18]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_21  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3749,7 +3285,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [19]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [19]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_22  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3758,7 +3294,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [20]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [20]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_23  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3767,7 +3303,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [21]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [21]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_24  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3776,7 +3312,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [22]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [22]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_3  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3785,7 +3321,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [1]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [1]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_4  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3794,7 +3330,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [2]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [2]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_5  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3803,7 +3339,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [3]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [3]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_6  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3812,7 +3348,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [4]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [4]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_7  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3821,7 +3357,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [5]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [5]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_8  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3830,7 +3366,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [6]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/data_buffer_0 [6]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg5_syn_9  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3839,97 +3375,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_0 [7]));  // ../../SGPIO_Controller_Slave.v(47)
-  AL_DFF_0 \uut/reg6_syn_10  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [8]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_11  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [9]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_2  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [0]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_3  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [1]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_4  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [2]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_5  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [3]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_6  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [4]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_7  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [5]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_8  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [6]));  // ../../SGPIO_Controller_Slave.v(104)
-  AL_DFF_0 \uut/reg6_syn_9  (
-    .ar(~rst_cnt_b_n),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_1),
-    .d(\uut/data_buffer_1_local_b [7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/data_buffer_1_local [7]));  // ../../SGPIO_Controller_Slave.v(104)
+    .q(\uut/data_buffer_0 [7]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_0 \uut/reg7_syn_10  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3938,7 +3384,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [8]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [8]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_11  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3947,7 +3393,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [9]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [9]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_12  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3956,7 +3402,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [10]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [10]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_13  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3965,7 +3411,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [11]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [11]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_14  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3974,7 +3420,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [12]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [12]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_15  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3983,7 +3429,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [13]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [13]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_16  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -3992,7 +3438,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [14]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [14]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_17  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4001,7 +3447,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [15]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [15]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_18  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4010,7 +3456,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [16]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [16]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_19  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4019,7 +3465,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [17]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [17]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_2  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4028,7 +3474,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [0]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [0]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_20  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4037,7 +3483,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [18]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [18]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_21  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4046,7 +3492,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [19]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [19]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_22  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4055,7 +3501,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [20]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [20]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_23  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4064,7 +3510,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [21]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [21]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_24  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4073,7 +3519,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [22]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [22]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_3  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4082,7 +3528,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [1]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [1]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_4  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4091,7 +3537,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [2]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [2]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_5  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4100,7 +3546,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [3]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [3]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_6  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4109,7 +3555,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [4]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [4]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_7  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4118,7 +3564,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [5]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [5]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_8  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4127,7 +3573,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [6]));  // ../../SGPIO_Controller_Slave.v(66)
+    .q(\uut/data_buffer_1 [6]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_0 \uut/reg7_syn_9  (
     .ar(~rst_cnt_b_n),
     .as(1'b0),
@@ -4136,43 +3582,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/data_buffer_1 [7]));  // ../../SGPIO_Controller_Slave.v(66)
-  AL_DFF_X \uut/reg8_syn_12  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local [9]),
-    .en(\uut/mux20_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_0_data_out_local [10]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_X \uut/reg8_syn_3  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local [0]),
-    .en(\uut/mux20_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_0_data_out_local [1]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_X \uut/reg8_syn_6  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local [3]),
-    .en(\uut/mux20_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_0_data_out_local [4]));  // ../../SGPIO_Controller_Slave.v(85)
-  AL_DFF_X \uut/reg8_syn_9  (
-    .ar(1'b0),
-    .as(1'b0),
-    .clk(~SCL_SGPIO_0),
-    .d(\uut/data_buffer_0_local [6]),
-    .en(\uut/mux20_syn_15 ),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(\uut/sgpio_0_data_out_local [7]));  // ../../SGPIO_Controller_Slave.v(85)
+    .q(\uut/data_buffer_1 [7]));  // ../../SGPIO_Controller_Slave.v(56)
   AL_DFF_X \uut/reg9_syn_14  (
     .ar(1'b0),
     .as(1'b0),
@@ -4181,7 +3591,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S3));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(C_ERROR_S3));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_X \uut/reg9_syn_15  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_0),
+    .d(\uut/data_buffer_0 [12]),
+    .en(\uut/mux6_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_0_data_out [13]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_X \uut/reg9_syn_16  (
     .ar(1'b0),
     .as(1'b0),
@@ -4190,7 +3609,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_0_data_out [14]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/sgpio_0_data_out [14]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_X \uut/reg9_syn_17  (
     .ar(1'b0),
     .as(1'b0),
@@ -4199,7 +3618,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S2));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(C_ERROR_S2));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_X \uut/reg9_syn_18  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_0),
+    .d(\uut/data_buffer_0 [15]),
+    .en(\uut/mux6_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_0_data_out [16]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_X \uut/reg9_syn_19  (
     .ar(1'b0),
     .as(1'b0),
@@ -4208,7 +3636,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_0_data_out [17]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/sgpio_0_data_out [17]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_X \uut/reg9_syn_20  (
     .ar(1'b0),
     .as(1'b0),
@@ -4217,7 +3645,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S1));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(C_ERROR_S1));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_X \uut/reg9_syn_21  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_0),
+    .d(\uut/data_buffer_0 [18]),
+    .en(\uut/mux6_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_0_data_out [19]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_X \uut/reg9_syn_22  (
     .ar(1'b0),
     .as(1'b0),
@@ -4226,7 +3663,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_0_data_out [20]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/sgpio_0_data_out [20]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_X \uut/reg9_syn_23  (
     .ar(1'b0),
     .as(1'b0),
@@ -4235,7 +3672,16 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(C_ERROR_S0));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(C_ERROR_S0));  // ../../SGPIO_Controller_Slave.v(37)
+  AL_DFF_X \uut/reg9_syn_24  (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(~SCL_SGPIO_0),
+    .d(\uut/data_buffer_0 [21]),
+    .en(\uut/mux6_syn_27 ),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(\uut/sgpio_0_data_out [22]));  // ../../SGPIO_Controller_Slave.v(37)
   AL_DFF_X \uut/reg9_syn_25  (
     .ar(1'b0),
     .as(1'b0),
@@ -4244,7 +3690,7 @@ module SGPIO_DEMO_TOP  // ../../SGPIO_DEMO_TOP.v(1)
     .en(\uut/mux6_syn_27 ),
     .sr(1'b0),
     .ss(1'b0),
-    .q(\uut/sgpio_0_data_out [23]));  // ../../SGPIO_Controller_Slave.v(47)
+    .q(\uut/sgpio_0_data_out [23]));  // ../../SGPIO_Controller_Slave.v(37)
 
 endmodule 
 
@@ -5062,6 +4508,58 @@ module eq_w16
   or i0_syn_189 (i0_syn_190, i0_syn_186, i0_syn_188);
   or i0_syn_191 (i0_syn_192, i0_syn_184, i0_syn_190);
   or i0_syn_193 (i0_syn_194, i0_syn_178, i0_syn_192);
+
+endmodule 
+
+module lt_u5_u5
+  (
+  ci,
+  i0,
+  i1,
+  o
+  );
+
+  input ci;
+  input [4:0] i0;
+  input [4:0] i1;
+  output o;
+
+  wire [4:0] al_401;
+  wire o_0;
+  wire o_1;
+  wire o_2;
+  wire o_3;
+
+  xor al_406 (al_401[0], i0[0], i1[0]);
+  xor al_407 (al_401[1], i0[1], i1[1]);
+  xor al_408 (al_401[2], i0[2], i1[2]);
+  xor al_409 (al_401[3], i0[3], i1[3]);
+  xor al_410 (al_401[4], i0[4], i1[4]);
+  AL_MUX al_411 (
+    .i0(ci),
+    .i1(i1[0]),
+    .sel(al_401[0]),
+    .o(o_0));
+  AL_MUX al_412 (
+    .i0(o_0),
+    .i1(i1[1]),
+    .sel(al_401[1]),
+    .o(o_1));
+  AL_MUX al_413 (
+    .i0(o_1),
+    .i1(i1[2]),
+    .sel(al_401[2]),
+    .o(o_2));
+  AL_MUX al_414 (
+    .i0(o_2),
+    .i1(i1[3]),
+    .sel(al_401[3]),
+    .o(o_3));
+  AL_MUX al_415 (
+    .i0(o_3),
+    .i1(i1[4]),
+    .sel(al_401[4]),
+    .o(o));
 
 endmodule 
 
@@ -6106,58 +5604,6 @@ module eq_w5
   or i0_syn_403 (i0_syn_404, i0_syn_398, i0_syn_400);
   or i0_syn_405 (i0_syn_406, i0_syn_396, i0_syn_404);
   or i0_syn_407 (i0_syn_408, i0_syn_402, i0_syn_406);
-
-endmodule 
-
-module lt_u5_u5
-  (
-  ci,
-  i0,
-  i1,
-  o
-  );
-
-  input ci;
-  input [4:0] i0;
-  input [4:0] i1;
-  output o;
-
-  wire [4:0] al_401;
-  wire o_0;
-  wire o_1;
-  wire o_2;
-  wire o_3;
-
-  xor al_406 (al_401[0], i0[0], i1[0]);
-  xor al_407 (al_401[1], i0[1], i1[1]);
-  xor al_408 (al_401[2], i0[2], i1[2]);
-  xor al_409 (al_401[3], i0[3], i1[3]);
-  xor al_410 (al_401[4], i0[4], i1[4]);
-  AL_MUX al_411 (
-    .i0(ci),
-    .i1(i1[0]),
-    .sel(al_401[0]),
-    .o(o_0));
-  AL_MUX al_412 (
-    .i0(o_0),
-    .i1(i1[1]),
-    .sel(al_401[1]),
-    .o(o_1));
-  AL_MUX al_413 (
-    .i0(o_1),
-    .i1(i1[2]),
-    .sel(al_401[2]),
-    .o(o_2));
-  AL_MUX al_414 (
-    .i0(o_2),
-    .i1(i1[3]),
-    .sel(al_401[3]),
-    .o(o_3));
-  AL_MUX al_415 (
-    .i0(o_3),
-    .i1(i1[4]),
-    .sel(al_401[4]),
-    .o(o));
 
 endmodule 
 

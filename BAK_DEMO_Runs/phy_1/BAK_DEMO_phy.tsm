@@ -1,310 +1,313 @@
 ef2_1
-13 1349 23 449 378 6710 0 0
-14.133 0.457 SGPIO_DEMO_TOP ef2_1 EF2L15LG100B Detail NA 11 1
+13 1355 23 455 374 6394 0 0
+13.666 0.325 SGPIO_DEMO_TOP ef2_1 EF2L15LG100B Detail NA 11 1
 clock: sys_clk
-13 6710 378 4
+13 6394 374 4
 Setup check
 23 3
-Endpoint: u_iic_drive/sda_out_reg_syn_5
-23 14.133000 92 3
-Timing path: u_iic_drive/sel0_syn_121.clk->u_iic_drive/sda_out_reg_syn_5
-u_iic_drive/sel0_syn_121.clk
-u_iic_drive/sda_out_reg_syn_5
-25 14.133000 23.313000 9.180000 6 6
-u_iic_drive/device_addr[0] u_iic_drive/sel0_syn_112.a[0]
-u_iic_drive/sel0_syn_61 u_iic_drive/reg4_syn_38.a[1]
-u_iic_drive/sda_out_n9 u_iic_drive/sel0_syn_119.a[1]
-u_iic_drive/sel0_syn_66 u_iic_drive/sel0_syn_126.d[1]
-u_iic_drive/sel0_syn_68 u_iic_drive/sel0_syn_115.a[1]
-u_iic_drive/sel0_syn_72 u_iic_drive/sda_out_reg_syn_5.a[1]
+Endpoint: u_iic_drive/sda_out_en_reg_syn_44
+23 13.666000 60 3
+Timing path: u_iic_drive/reg6_syn_45.clk->u_iic_drive/sda_out_en_reg_syn_44
+u_iic_drive/reg6_syn_45.clk
+u_iic_drive/sda_out_en_reg_syn_44
+25 13.666000 23.313000 9.647000 6 6
+u_iic_drive/state_c[3] u_iic_drive/state_c[0]_syn_518.c[1]
+u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_524.d[1]
+u_iic_drive/state_c[0]_syn_455 u_iic_drive/sda_out_en_reg_syn_37.a[1]
+u_iic_drive/sda_out_en_reg_syn_9 u_iic_drive/sda_out_en_reg_syn_46.a[1]
+u_iic_drive/sda_out_en_reg_syn_11 u_iic_drive/sda_out_en_reg_syn_44.d[1]
+u_iic_drive/sda_out_en_reg_syn_13 u_iic_drive/sda_out_en_reg_syn_44.a[0]
 
-Timing path: u_iic_drive/reg3_syn_97.clk->u_iic_drive/sda_out_reg_syn_5
-u_iic_drive/reg3_syn_97.clk
-u_iic_drive/sda_out_reg_syn_5
-73 14.150000 23.313000 9.163000 6 6
-u_iic_drive/bit_cnt[0] u_iic_drive/reg4_syn_41.d[1]
-u_iic_drive/sda_out_en_reg_syn_5 u_iic_drive/reg4_syn_38.c[1]
-u_iic_drive/sda_out_n9 u_iic_drive/sel0_syn_119.a[1]
-u_iic_drive/sel0_syn_66 u_iic_drive/sel0_syn_126.d[1]
-u_iic_drive/sel0_syn_68 u_iic_drive/sel0_syn_115.a[1]
-u_iic_drive/sel0_syn_72 u_iic_drive/sda_out_reg_syn_5.a[1]
+Timing path: u_iic_drive/reg6_syn_51.clk->u_iic_drive/sda_out_en_reg_syn_44
+u_iic_drive/reg6_syn_51.clk
+u_iic_drive/sda_out_en_reg_syn_44
+73 13.781000 23.313000 9.532000 6 6
+u_iic_drive/state_c[2] u_iic_drive/state_c[0]_syn_518.d[1]
+u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_524.d[1]
+u_iic_drive/state_c[0]_syn_455 u_iic_drive/sda_out_en_reg_syn_37.a[1]
+u_iic_drive/sda_out_en_reg_syn_9 u_iic_drive/sda_out_en_reg_syn_46.a[1]
+u_iic_drive/sda_out_en_reg_syn_11 u_iic_drive/sda_out_en_reg_syn_44.d[1]
+u_iic_drive/sda_out_en_reg_syn_13 u_iic_drive/sda_out_en_reg_syn_44.a[0]
 
-Timing path: u_iic_drive/sel0_syn_121.clk->u_iic_drive/sda_out_reg_syn_5
-u_iic_drive/sel0_syn_121.clk
-u_iic_drive/sda_out_reg_syn_5
-121 14.212000 23.313000 9.101000 5 5
-u_iic_drive/device_addr[0] u_iic_drive/sel0_syn_112.a[0]
-u_iic_drive/sel0_syn_61 u_iic_drive/reg4_syn_38.a[1]
-u_iic_drive/sda_out_n9 u_iic_drive/sel0_syn_112.a[1]
-u_iic_drive/sel0_syn_79 u_iic_drive/sel0_syn_119.a[0]
-u_iic_drive/sel0_syn_81 u_iic_drive/sda_out_reg_syn_5.b[1]
-
-
-Endpoint: u_iic_drive/mux6_syn_45
-167 14.631000 20 3
-Timing path: u_iic_drive/sda_out_en_reg_syn_34.clk->u_iic_drive/mux6_syn_45
-u_iic_drive/sda_out_en_reg_syn_34.clk
-u_iic_drive/mux6_syn_45
-169 14.631000 23.313000 8.682000 5 5
-u_iic_drive/state_c[3] u_iic_drive/state_c[0]_syn_535.c[1]
-u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_544.d[0]
-u_iic_drive/state_c[0]_syn_455 u_iic_drive/reg3_syn_95.a[1]
-u_iic_drive/rdata_r_b_n8 u_iic_drive/reg3_syn_99.d[1]
-u_iic_drive/reg3_syn_37 u_iic_drive/mux6_syn_45.a[0]
-
-Timing path: u_iic_drive/sda_out_en_reg_syn_34.clk->u_iic_drive/mux6_syn_45
-u_iic_drive/sda_out_en_reg_syn_34.clk
-u_iic_drive/mux6_syn_45
-215 14.631000 23.313000 8.682000 5 5
-u_iic_drive/state_c[3] u_iic_drive/state_c[0]_syn_535.c[1]
-u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_544.d[0]
-u_iic_drive/state_c[0]_syn_455 u_iic_drive/reg3_syn_95.a[0]
-u_iic_drive/rdata_r_b_n8 u_iic_drive/reg3_syn_99.d[1]
-u_iic_drive/reg3_syn_37 u_iic_drive/mux6_syn_45.a[0]
-
-Timing path: u_iic_drive/state_c[0]_syn_527.clk->u_iic_drive/mux6_syn_45
-u_iic_drive/state_c[0]_syn_527.clk
-u_iic_drive/mux6_syn_45
-261 14.899000 23.313000 8.414000 5 5
-u_iic_drive/state_c[2] u_iic_drive/state_c[0]_syn_535.d[1]
-u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_544.d[0]
-u_iic_drive/state_c[0]_syn_455 u_iic_drive/reg3_syn_95.a[1]
-u_iic_drive/rdata_r_b_n8 u_iic_drive/reg3_syn_99.d[1]
-u_iic_drive/reg3_syn_37 u_iic_drive/mux6_syn_45.a[0]
+Timing path: u_iic_drive/state_c[0]_syn_518.clk->u_iic_drive/sda_out_en_reg_syn_44
+u_iic_drive/state_c[0]_syn_518.clk
+u_iic_drive/sda_out_en_reg_syn_44
+121 14.460000 23.313000 8.853000 5 5
+u_iic_drive/state_c[0] u_iic_drive/state_c[0]_syn_524.b[1]
+u_iic_drive/state_c[0]_syn_455 u_iic_drive/sda_out_en_reg_syn_37.a[1]
+u_iic_drive/sda_out_en_reg_syn_9 u_iic_drive/sda_out_en_reg_syn_46.a[1]
+u_iic_drive/sda_out_en_reg_syn_11 u_iic_drive/sda_out_en_reg_syn_44.d[1]
+u_iic_drive/sda_out_en_reg_syn_13 u_iic_drive/sda_out_en_reg_syn_44.a[0]
 
 
-Endpoint: u_iic_drive/sda_out_en_reg_syn_36
-307 14.685000 145 3
-Timing path: u_iic_drive/sda_out_en_reg_syn_34.clk->u_iic_drive/sda_out_en_reg_syn_36
-u_iic_drive/sda_out_en_reg_syn_34.clk
-u_iic_drive/sda_out_en_reg_syn_36
-309 14.685000 23.313000 8.628000 5 5
-u_iic_drive/state_c[3] u_iic_drive/state_c[0]_syn_535.c[1]
-u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_544.d[0]
-u_iic_drive/state_c[0]_syn_455 u_iic_drive/state_c[0]_syn_525.d[1]
-u_iic_drive/state_c[5]_syn_188 u_iic_drive/sda_out_en_reg_syn_38.a[1]
-u_iic_drive/sda_out_en_reg_syn_15 u_iic_drive/sda_out_en_reg_syn_36.c[1]
+Endpoint: u_iic_drive/sel0_syn_130
+167 13.751000 141 3
+Timing path: reg1_syn_26.clk->u_iic_drive/sel0_syn_130
+reg1_syn_26.clk
+u_iic_drive/sel0_syn_130
+169 13.751000 23.313000 9.562000 6 6
+u_iic_drive/device_addr[0] reg1_syn_26.a[0]
+u_iic_drive/sel0_syn_61 u_iic_drive/sel0_syn_125.a[1]
+u_iic_drive/sda_out_n9 u_iic_drive/sel0_syn_128.a[1]
+u_iic_drive/sel0_syn_66 u_iic_drive/sel0_syn_130.d[1]
+u_iic_drive/sel0_syn_68 u_iic_drive/sel0_syn_135.a[1]
+u_iic_drive/sel0_syn_72 u_iic_drive/sel0_syn_130.a[0]
 
-Timing path: u_iic_drive/sda_out_en_reg_syn_34.clk->u_iic_drive/sda_out_en_reg_syn_36
-u_iic_drive/sda_out_en_reg_syn_34.clk
-u_iic_drive/sda_out_en_reg_syn_36
-355 14.685000 23.313000 8.628000 5 5
-u_iic_drive/state_c[3] u_iic_drive/state_c[0]_syn_535.c[1]
-u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_544.d[0]
-u_iic_drive/state_c[0]_syn_455 u_iic_drive/state_c[0]_syn_525.d[1]
-u_iic_drive/state_c[5]_syn_188 u_iic_drive/sda_out_en_reg_syn_38.a[0]
-u_iic_drive/sda_out_en_reg_syn_15 u_iic_drive/sda_out_en_reg_syn_36.c[1]
+Timing path: reg1_syn_26.clk->u_iic_drive/sel0_syn_130
+reg1_syn_26.clk
+u_iic_drive/sel0_syn_130
+217 13.751000 23.313000 9.562000 6 6
+u_iic_drive/device_addr[0] reg1_syn_26.a[0]
+u_iic_drive/sel0_syn_61 u_iic_drive/sel0_syn_125.a[0]
+u_iic_drive/sda_out_n9 u_iic_drive/sel0_syn_128.a[1]
+u_iic_drive/sel0_syn_66 u_iic_drive/sel0_syn_130.d[1]
+u_iic_drive/sel0_syn_68 u_iic_drive/sel0_syn_135.a[1]
+u_iic_drive/sel0_syn_72 u_iic_drive/sel0_syn_130.a[0]
 
-Timing path: u_iic_drive/sda_out_en_reg_syn_34.clk->u_iic_drive/sda_out_en_reg_syn_36
-u_iic_drive/sda_out_en_reg_syn_34.clk
-u_iic_drive/sda_out_en_reg_syn_36
-401 14.685000 23.313000 8.628000 5 5
-u_iic_drive/state_c[3] u_iic_drive/state_c[0]_syn_535.c[1]
-u_iic_drive/state_c[0]_syn_451 u_iic_drive/state_c[0]_syn_544.d[0]
-u_iic_drive/state_c[0]_syn_455 u_iic_drive/state_c[0]_syn_525.d[1]
-u_iic_drive/state_c[5]_syn_188 u_iic_drive/sda_out_en_reg_syn_38.a[1]
-u_iic_drive/sda_out_en_reg_syn_15 u_iic_drive/sda_out_en_reg_syn_36.c[0]
+Timing path: reg1_syn_26.clk->u_iic_drive/sel0_syn_130
+reg1_syn_26.clk
+u_iic_drive/sel0_syn_130
+265 13.811000 23.313000 9.502000 6 6
+u_iic_drive/device_addr[2] reg1_syn_26.b[1]
+u_iic_drive/sel0_syn_63 u_iic_drive/sel0_syn_125.b[1]
+u_iic_drive/sda_out_n9 u_iic_drive/sel0_syn_128.a[1]
+u_iic_drive/sel0_syn_66 u_iic_drive/sel0_syn_130.d[1]
+u_iic_drive/sel0_syn_68 u_iic_drive/sel0_syn_135.a[1]
+u_iic_drive/sel0_syn_72 u_iic_drive/sel0_syn_130.a[0]
+
+
+Endpoint: reg0_syn_142
+313 14.618000 40 3
+Timing path: reg0_syn_131.clk->reg0_syn_142
+reg0_syn_131.clk
+reg0_syn_142
+315 14.618000 23.339000 8.721000 5 5
+clk_counter[7] reg0_syn_131.d[1]
+rw_flag_b_reg_syn_22 reg0_syn_157.d[1]
+rw_flag_b_reg_syn_24 reg0_syn_134.a[1]
+rw_flag_b_reg_syn_28 reg0_syn_137.b[0]
+clk_counter_b_n reg0_syn_142.d[1]
+
+Timing path: reg0_syn_148.clk->reg0_syn_142
+reg0_syn_148.clk
+reg0_syn_142
+361 14.766000 23.339000 8.573000 5 5
+clk_counter[19] reg0_syn_163.d[0]
+rw_flag_b_reg_syn_14 reg0_syn_151.d[1]
+rw_flag_b_reg_syn_16 reg0_syn_163.a[1]
+rw_flag_b_reg_syn_20 reg0_syn_137.a[0]
+clk_counter_b_n reg0_syn_142.d[1]
+
+Timing path: reg0_syn_131.clk->reg0_syn_142
+reg0_syn_131.clk
+reg0_syn_142
+407 14.817000 23.339000 8.522000 5 5
+clk_counter[6] reg0_syn_131.c[1]
+rw_flag_b_reg_syn_22 reg0_syn_157.d[1]
+rw_flag_b_reg_syn_24 reg0_syn_134.a[1]
+rw_flag_b_reg_syn_28 reg0_syn_137.b[0]
+clk_counter_b_n reg0_syn_142.d[1]
 
 
 
 Hold check
-447 3
-Endpoint: u_iic_drive/reg4_syn_41
-449 0.457000 1 1
-Timing path: u_iic_drive/reg3_syn_97.clk->u_iic_drive/reg4_syn_41
-u_iic_drive/reg3_syn_97.clk
-u_iic_drive/reg4_syn_41
-451 0.457000 2.719000 3.176000 0 1
-u_iic_drive/rdata_r[7] u_iic_drive/reg4_syn_41.mi[0]
-
-
-Endpoint: u_iic_drive/reg4_syn_46
-489 0.457000 1 1
-Timing path: u_iic_drive/reg3_syn_89.clk->u_iic_drive/reg4_syn_46
-u_iic_drive/reg3_syn_89.clk
-u_iic_drive/reg4_syn_46
-491 0.457000 2.719000 3.176000 0 1
-u_iic_drive/rdata_r[2] u_iic_drive/reg4_syn_46.mi[0]
+453 3
+Endpoint: u_iic_drive/reg4_syn_38
+455 0.325000 1 1
+Timing path: u_iic_drive/reg3_syn_93.clk->u_iic_drive/reg4_syn_38
+u_iic_drive/reg3_syn_93.clk
+u_iic_drive/reg4_syn_38
+457 0.325000 2.719000 3.044000 0 1
+u_iic_drive/rdata_r[6] u_iic_drive/reg4_syn_38.mi[1]
 
 
 Endpoint: u_iic_drive/reg4_syn_41
-529 0.469000 1 1
-Timing path: u_iic_drive/reg3_syn_86.clk->u_iic_drive/reg4_syn_41
-u_iic_drive/reg3_syn_86.clk
+495 0.446000 1 1
+Timing path: u_iic_drive/reg5_syn_29.clk->u_iic_drive/reg4_syn_41
+u_iic_drive/reg5_syn_29.clk
 u_iic_drive/reg4_syn_41
-531 0.469000 2.686000 3.155000 0 1
-u_iic_drive/rdata_r[3] u_iic_drive/reg4_syn_41.mi[1]
+497 0.446000 2.719000 3.165000 0 1
+u_iic_drive/rdata_r[4] u_iic_drive/reg4_syn_41.mi[0]
+
+
+Endpoint: u_iic_drive/reg4_syn_45
+535 0.454000 1 1
+Timing path: u_iic_drive/reg3_syn_90.clk->u_iic_drive/reg4_syn_45
+u_iic_drive/reg3_syn_90.clk
+u_iic_drive/reg4_syn_45
+537 0.454000 2.719000 3.173000 0 1
+u_iic_drive/rdata_r[2] u_iic_drive/reg4_syn_45.mi[0]
 
 
 
 Recovery check
-569 3
-Endpoint: u_iic_drive/state_c[0]_syn_537
-571 15.331000 16 3
-Timing path: reg6_syn_91.clk->u_iic_drive/state_c[0]_syn_537
-reg6_syn_91.clk
-u_iic_drive/state_c[0]_syn_537
-573 15.331000 23.129000 7.798000 3 4
-rst_cnt[7] reg6_syn_88.b[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[1]
-rst_cnt_b_n_dup_2 u_iic_drive/state_c[0]_syn_537.sr
-
-Timing path: reg6_syn_79.clk->u_iic_drive/state_c[0]_syn_537
-reg6_syn_79.clk
-u_iic_drive/state_c[0]_syn_537
-617 15.488000 23.129000 7.641000 3 4
-rst_cnt[8] reg6_syn_88.c[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[1]
-rst_cnt_b_n_dup_2 u_iic_drive/state_c[0]_syn_537.sr
-
-Timing path: reg6_syn_94.clk->u_iic_drive/state_c[0]_syn_537
-reg6_syn_94.clk
-u_iic_drive/state_c[0]_syn_537
-661 15.544000 23.129000 7.585000 3 4
-rst_cnt[6] reg6_syn_88.a[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[1]
-rst_cnt_b_n_dup_2 u_iic_drive/state_c[0]_syn_537.sr
-
-
-Endpoint: u_iic_drive/wr_flag_reg_syn_8
-705 15.331000 16 3
-Timing path: reg6_syn_91.clk->u_iic_drive/wr_flag_reg_syn_8
-reg6_syn_91.clk
-u_iic_drive/wr_flag_reg_syn_8
-707 15.331000 23.129000 7.798000 3 4
-rst_cnt[7] reg6_syn_88.b[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[1]
-rst_cnt_b_n_dup_2 u_iic_drive/wr_flag_reg_syn_8.sr
-
-Timing path: reg6_syn_79.clk->u_iic_drive/wr_flag_reg_syn_8
-reg6_syn_79.clk
-u_iic_drive/wr_flag_reg_syn_8
-751 15.488000 23.129000 7.641000 3 4
-rst_cnt[8] reg6_syn_88.c[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[1]
-rst_cnt_b_n_dup_2 u_iic_drive/wr_flag_reg_syn_8.sr
-
-Timing path: reg6_syn_94.clk->u_iic_drive/wr_flag_reg_syn_8
-reg6_syn_94.clk
-u_iic_drive/wr_flag_reg_syn_8
-795 15.544000 23.129000 7.585000 3 4
-rst_cnt[6] reg6_syn_88.a[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[1]
-rst_cnt_b_n_dup_2 u_iic_drive/wr_flag_reg_syn_8.sr
-
-
+575 3
 Endpoint: u_iic_drive/state_c[0]_syn_520
-839 15.350000 16 3
-Timing path: reg6_syn_91.clk->u_iic_drive/state_c[0]_syn_520
-reg6_syn_91.clk
+577 15.339000 16 3
+Timing path: reg6_syn_87.clk->u_iic_drive/state_c[0]_syn_520
+reg6_syn_87.clk
 u_iic_drive/state_c[0]_syn_520
-841 15.350000 23.129000 7.779000 3 4
-rst_cnt[7] reg6_syn_88.b[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[0]
+579 15.339000 23.129000 7.790000 3 4
+rst_cnt[7] reg6_syn_90.b[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg0_syn_134.a[0]
 rst_cnt_b_n_dup_3 u_iic_drive/state_c[0]_syn_520.sr
 
-Timing path: reg6_syn_79.clk->u_iic_drive/state_c[0]_syn_520
-reg6_syn_79.clk
+Timing path: add3_syn_98.clk->u_iic_drive/state_c[0]_syn_520
+add3_syn_98.clk
 u_iic_drive/state_c[0]_syn_520
-885 15.507000 23.129000 7.622000 3 4
-rst_cnt[8] reg6_syn_88.c[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[0]
+623 15.343000 23.129000 7.786000 3 4
+rst_cnt[6] reg6_syn_90.a[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg0_syn_134.a[0]
 rst_cnt_b_n_dup_3 u_iic_drive/state_c[0]_syn_520.sr
 
-Timing path: reg6_syn_94.clk->u_iic_drive/state_c[0]_syn_520
-reg6_syn_94.clk
+Timing path: reg6_syn_87.clk->u_iic_drive/state_c[0]_syn_520
+reg6_syn_87.clk
 u_iic_drive/state_c[0]_syn_520
-929 15.563000 23.129000 7.566000 3 4
-rst_cnt[6] reg6_syn_88.a[0]
-rw_flag_b_reg_syn_5 reg6_syn_85.d[1]
-rw_flag_b_reg_syn_7 rw_flag_b_reg_syn_65.a[0]
+667 15.423000 23.129000 7.706000 3 4
+rst_cnt[8] reg6_syn_90.c[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg0_syn_134.a[0]
 rst_cnt_b_n_dup_3 u_iic_drive/state_c[0]_syn_520.sr
+
+
+Endpoint: reg0_syn_151
+711 15.545000 16 3
+Timing path: reg6_syn_87.clk->reg0_syn_151
+reg6_syn_87.clk
+reg0_syn_151
+713 15.545000 23.129000 7.584000 3 4
+rst_cnt[7] reg6_syn_90.b[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg6_syn_84.a[0]
+rst_cnt_b_n_dup_4 reg0_syn_151.sr
+
+Timing path: add3_syn_98.clk->reg0_syn_151
+add3_syn_98.clk
+reg0_syn_151
+757 15.549000 23.129000 7.580000 3 4
+rst_cnt[6] reg6_syn_90.a[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg6_syn_84.a[0]
+rst_cnt_b_n_dup_4 reg0_syn_151.sr
+
+Timing path: reg6_syn_87.clk->reg0_syn_151
+reg6_syn_87.clk
+reg0_syn_151
+801 15.629000 23.129000 7.500000 3 4
+rst_cnt[8] reg6_syn_90.c[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg6_syn_84.a[0]
+rst_cnt_b_n_dup_4 reg0_syn_151.sr
+
+
+Endpoint: reg0_syn_142
+845 15.545000 16 3
+Timing path: reg6_syn_87.clk->reg0_syn_142
+reg6_syn_87.clk
+reg0_syn_142
+847 15.545000 23.129000 7.584000 3 4
+rst_cnt[7] reg6_syn_90.b[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg6_syn_84.a[0]
+rst_cnt_b_n_dup_4 reg0_syn_142.sr
+
+Timing path: add3_syn_98.clk->reg0_syn_142
+add3_syn_98.clk
+reg0_syn_142
+891 15.549000 23.129000 7.580000 3 4
+rst_cnt[6] reg6_syn_90.a[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg6_syn_84.a[0]
+rst_cnt_b_n_dup_4 reg0_syn_142.sr
+
+Timing path: reg6_syn_87.clk->reg0_syn_142
+reg6_syn_87.clk
+reg0_syn_142
+935 15.629000 23.129000 7.500000 3 4
+rst_cnt[8] reg6_syn_90.c[1]
+rw_flag_b_reg_syn_5 reg6_syn_96.d[0]
+rw_flag_b_reg_syn_7 reg6_syn_84.a[0]
+rst_cnt_b_n_dup_4 reg0_syn_142.sr
 
 
 
 Removal check
-973 3
-Endpoint: reg0_syn_149
-975 0.804000 16 3
-Timing path: add3_syn_98.clk->reg0_syn_149
-add3_syn_98.clk
-reg0_syn_149
-977 0.804000 2.911000 3.715000 1 2
-rst_cnt[10] reg0_syn_131.d[0]
-rst_cnt_b_n_dup_4 reg0_syn_149.sr
+979 3
+Endpoint: u_iic_drive/reg7_syn_31
+981 0.770000 16 3
+Timing path: reg6_syn_90.clk->u_iic_drive/reg7_syn_31
+reg6_syn_90.clk
+u_iic_drive/reg7_syn_31
+983 0.770000 2.911000 3.681000 1 2
+rst_cnt[11] reg6_syn_87.e[0]
+rst_cnt_b_n_dup_1 u_iic_drive/reg7_syn_31.sr
 
-Timing path: reg6_syn_91.clk->reg0_syn_149
-reg6_syn_91.clk
-reg0_syn_149
-1017 0.914000 2.911000 3.825000 1 2
-rst_cnt[11] reg0_syn_131.e[0]
-rst_cnt_b_n_dup_4 reg0_syn_149.sr
+Timing path: reg6_syn_90.clk->u_iic_drive/reg7_syn_31
+reg6_syn_90.clk
+u_iic_drive/reg7_syn_31
+1023 0.935000 2.911000 3.846000 1 2
+rst_cnt[10] reg6_syn_87.d[0]
+rst_cnt_b_n_dup_1 u_iic_drive/reg7_syn_31.sr
 
-Timing path: reg6_syn_85.clk->reg0_syn_149
-reg6_syn_85.clk
-reg0_syn_149
-1057 1.345000 2.911000 4.256000 2 3
-rst_cnt[14] reg6_syn_85.c[0]
-rw_flag_b_reg_syn_9 reg0_syn_131.b[0]
-rst_cnt_b_n_dup_4 reg0_syn_149.sr
-
-
-Endpoint: reg0_syn_146
-1099 0.906000 16 3
-Timing path: add3_syn_98.clk->reg0_syn_146
-add3_syn_98.clk
-reg0_syn_146
-1101 0.906000 2.911000 3.817000 1 2
-rst_cnt[10] reg0_syn_131.d[0]
-rst_cnt_b_n_dup_4 reg0_syn_146.sr
-
-Timing path: reg6_syn_91.clk->reg0_syn_146
-reg6_syn_91.clk
-reg0_syn_146
-1141 1.016000 2.911000 3.927000 1 2
-rst_cnt[11] reg0_syn_131.e[0]
-rst_cnt_b_n_dup_4 reg0_syn_146.sr
-
-Timing path: reg6_syn_85.clk->reg0_syn_146
-reg6_syn_85.clk
-reg0_syn_146
-1181 1.447000 2.911000 4.358000 2 3
-rst_cnt[14] reg6_syn_85.c[0]
-rw_flag_b_reg_syn_9 reg0_syn_131.b[0]
-rst_cnt_b_n_dup_4 reg0_syn_146.sr
+Timing path: reg6_syn_99.clk->u_iic_drive/reg7_syn_31
+reg6_syn_99.clk
+u_iic_drive/reg7_syn_31
+1063 1.379000 2.911000 4.290000 2 3
+rst_cnt[1] reg6_syn_93.b[0]
+rw_flag_b_reg_syn_11 reg6_syn_87.c[0]
+rst_cnt_b_n_dup_1 u_iic_drive/reg7_syn_31.sr
 
 
-Endpoint: reg0_syn_137
-1223 0.906000 16 3
-Timing path: add3_syn_98.clk->reg0_syn_137
-add3_syn_98.clk
-reg0_syn_137
-1225 0.906000 2.911000 3.817000 1 2
-rst_cnt[10] reg0_syn_131.d[0]
-rst_cnt_b_n_dup_4 reg0_syn_137.sr
+Endpoint: u_iic_drive/reg3_syn_93
+1105 0.788000 16 3
+Timing path: reg6_syn_90.clk->u_iic_drive/reg3_syn_93
+reg6_syn_90.clk
+u_iic_drive/reg3_syn_93
+1107 0.788000 2.911000 3.699000 1 2
+rst_cnt[11] reg6_syn_87.e[0]
+rst_cnt_b_n_dup_1 u_iic_drive/reg3_syn_93.sr
 
-Timing path: reg6_syn_91.clk->reg0_syn_137
-reg6_syn_91.clk
-reg0_syn_137
-1265 1.016000 2.911000 3.927000 1 2
-rst_cnt[11] reg0_syn_131.e[0]
-rst_cnt_b_n_dup_4 reg0_syn_137.sr
+Timing path: reg6_syn_90.clk->u_iic_drive/reg3_syn_93
+reg6_syn_90.clk
+u_iic_drive/reg3_syn_93
+1147 0.953000 2.911000 3.864000 1 2
+rst_cnt[10] reg6_syn_87.d[0]
+rst_cnt_b_n_dup_1 u_iic_drive/reg3_syn_93.sr
 
-Timing path: reg6_syn_85.clk->reg0_syn_137
-reg6_syn_85.clk
-reg0_syn_137
-1305 1.447000 2.911000 4.358000 2 3
-rst_cnt[14] reg6_syn_85.c[0]
-rw_flag_b_reg_syn_9 reg0_syn_131.b[0]
-rst_cnt_b_n_dup_4 reg0_syn_137.sr
+Timing path: reg6_syn_99.clk->u_iic_drive/reg3_syn_93
+reg6_syn_99.clk
+u_iic_drive/reg3_syn_93
+1187 1.397000 2.911000 4.308000 2 3
+rst_cnt[1] reg6_syn_93.b[0]
+rw_flag_b_reg_syn_11 reg6_syn_87.c[0]
+rst_cnt_b_n_dup_1 u_iic_drive/reg3_syn_93.sr
+
+
+Endpoint: reg1_syn_26
+1229 0.788000 16 3
+Timing path: reg6_syn_90.clk->reg1_syn_26
+reg6_syn_90.clk
+reg1_syn_26
+1231 0.788000 2.911000 3.699000 1 2
+rst_cnt[11] reg6_syn_87.e[0]
+rst_cnt_b_n_dup_1 reg1_syn_26.sr
+
+Timing path: reg6_syn_90.clk->reg1_syn_26
+reg6_syn_90.clk
+reg1_syn_26
+1271 0.953000 2.911000 3.864000 1 2
+rst_cnt[10] reg6_syn_87.d[0]
+rst_cnt_b_n_dup_1 reg1_syn_26.sr
+
+Timing path: reg6_syn_99.clk->reg1_syn_26
+reg6_syn_99.clk
+reg1_syn_26
+1311 1.397000 2.911000 4.308000 2 3
+rst_cnt[1] reg6_syn_93.b[0]
+rw_flag_b_reg_syn_11 reg6_syn_87.c[0]
+rst_cnt_b_n_dup_1 reg1_syn_26.sr
 
 
 
@@ -313,7 +316,7 @@ rst_cnt_b_n_dup_4 reg0_syn_137.sr
 Timing group statistics: 
 	Clock constraints: 
 	  Clock Name                                  Min Period     Max Freq           Skew      Fanout            TNS
-	  sys_clk (50.000MHz)                            5.867ns     170.445MHz        0.262ns        78        0.000ns
+	  sys_clk (50.000MHz)                            6.334ns     157.878MHz        0.262ns        77        0.000ns
 	Minimum input arrival time before clock: no constraint path
 	Maximum output required time after clock: no constraint path
 	Maximum combinational path delay: no constraint path

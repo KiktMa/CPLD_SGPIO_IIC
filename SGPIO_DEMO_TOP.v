@@ -85,6 +85,7 @@ module SGPIO_DEMO_TOP(
     wire [23:0] sgpio_1_data_out;  // SGPIO_1组 信号输出 (4 个硬盘)
 	wire [11:0] sgpio_0_data_out_local; // SGPIO_0组 信号输出 (4 个硬盘)
     wire [11:0] sgpio_1_data_out_local;  // SGPIO_1组 信号输出 (4 个硬盘)
+    
     // 实例化模块
     SGPIO_Controller_Slave uut (
         .clk				(sys_clk),
@@ -179,73 +180,135 @@ module SGPIO_DEMO_TOP(
             end
         end
     end
-
-    
+ 
     // 数据传输逻辑
     always @(*) begin
     	if (transmit_trigger) begin
-            //更新输出信号
-            C_LOCATE_S0 <= sgpio_0_data_out_local[10];
-    		C_LOCATE_S1 <= sgpio_0_data_out_local[7];
-    		C_LOCATE_S2 <= sgpio_0_data_out_local[4];
-    		C_LOCATE_S3 <= sgpio_0_data_out_local[1];
-    		
-    		// 第二组SGPIO
-    		C_LOCATE_S4 <= sgpio_1_data_out_local[10];
-    		C_LOCATE_S5 <= sgpio_1_data_out_local[7];
-    		C_LOCATE_S6 <= sgpio_1_data_out_local[4];
-    		C_LOCATE_S7 <= sgpio_1_data_out_local[1];
+            	//更新输出信号
+//            	C_LOCATE_S0 <= sgpio_0_data_out[22] | sgpio_0_data_out_local[10];
+//    			C_LOCATE_S1 <= sgpio_0_data_out[19] | sgpio_0_data_out_local[7];
+//    			C_LOCATE_S2 <= sgpio_0_data_out[16] | sgpio_0_data_out_local[4];
+//    			C_LOCATE_S3 <= sgpio_0_data_out[13] | sgpio_0_data_out_local[1];
+    			
+//    			//第二组SGPIO
+//    			C_LOCATE_S4 <= sgpio_1_data_out[22] | sgpio_1_data_out_local[10];
+//    			C_LOCATE_S5 <= sgpio_1_data_out[19] | sgpio_1_data_out_local[7];
+//    			C_LOCATE_S6 <= sgpio_1_data_out[16] | sgpio_1_data_out_local[4];
+//    			C_LOCATE_S7 <= sgpio_1_data_out[13] | sgpio_1_data_out_local[1];
+
+				C_LOCATE_S0 <= sgpio_0_data_out[22];
+                C_LOCATE_S1 <= sgpio_0_data_out[19];
+                C_LOCATE_S2 <= sgpio_0_data_out[16];
+    			C_LOCATE_S3 <= sgpio_0_data_out[13];
+    			                                   
+    			//第二组SGPIO                         
+    			C_LOCATE_S4 <= sgpio_1_data_out[22];             
+    			C_LOCATE_S5 <= sgpio_1_data_out[19];// 第二组SGPIO  
+    			C_LOCATE_S6 <= sgpio_1_data_out[16];
+                C_LOCATE_S7 <= sgpio_1_data_out[13];
+                
+                C_ACT_S0 <= ~(sgpio_0_data_out[23] & ACT_S0);
+                C_ACT_S1 <= ~(sgpio_0_data_out[20] & ACT_S1); 
+                C_ACT_S2 <= ~(sgpio_0_data_out[17] & ACT_S2); 
+                C_ACT_S3 <= ~(sgpio_0_data_out[14] & ACT_S3);
+    			
+                C_ACT_S4 <= ~(sgpio_1_data_out[23] & ACT_S4);
+                C_ACT_S5 <= ~(sgpio_1_data_out[20] & ACT_S5);
+    			C_ACT_S6 <= ~(sgpio_1_data_out[17] & ACT_S6);
+    			C_ACT_S7 <= ~(sgpio_1_data_out[14] & ACT_S7);
             
-            C_ACT_S0 <= ~sgpio_0_data_out[23];
-    		C_ACT_S1 <= ~sgpio_0_data_out[20];
-    		C_ACT_S2 <= ~sgpio_0_data_out[17];
-    		C_ACT_S3 <= ~sgpio_0_data_out[14];
-    		
-    		// 第二组SGPIO
-    		C_ACT_S4 <= ~sgpio_1_data_out[23];
-    		C_ACT_S5 <= ~sgpio_1_data_out[20];
-    		C_ACT_S6 <= ~sgpio_1_data_out[17];
-    		C_ACT_S7 <= ~sgpio_1_data_out[14];
+//            	C_LOCATE_S0 <= sgpio_0_data_out_local[10];
+//    			C_LOCATE_S1 <= sgpio_0_data_out_local[7];
+//    			C_LOCATE_S2 <= sgpio_0_data_out_local[4];
+//    			C_LOCATE_S3 <= sgpio_0_data_out_local[1];
+    			
+//    			// 第二组SGPIO
+//    			C_LOCATE_S4 <= sgpio_1_data_out_local[10];
+//    			C_LOCATE_S5 <= sgpio_1_data_out_local[7]; 
+//    			C_LOCATE_S6 <= sgpio_1_data_out_local[4]; 
+//    			C_LOCATE_S7 <= sgpio_1_data_out_local[1]; 
+            	
+//            	C_ACT_S0 <= ~(sgpio_0_data_out[23] & ACT_S0);
+//    			C_ACT_S1 <= ~(sgpio_0_data_out[20] & ACT_S1);
+//    			C_ACT_S2 <= ~(sgpio_0_data_out[17] & ACT_S2);
+//    			C_ACT_S3 <= ~(sgpio_0_data_out[14] & ACT_S3);
+    			             
+//    			// 第二组SGPIO  
+//    			C_ACT_S4 <= ~(sgpio_1_data_out[23] & ~ACT_S4);
+//    			C_ACT_S5 <= ~(sgpio_1_data_out[20] & ~ACT_S5);
+//    			C_ACT_S6 <= ~(sgpio_1_data_out[17] & ~ACT_S6);
+//    			C_ACT_S7 <= ~(sgpio_1_data_out[14] & ~ACT_S7);
         end else begin
-        	//更新输出信号
-            C_LOCATE_S0 <= sgpio_0_data_out_local[10] & ~sgpio_0_data_out_local[10];
-    		C_LOCATE_S1 <= sgpio_0_data_out_local[7] & ~sgpio_0_data_out_local[7];
-    		C_LOCATE_S2 <= sgpio_0_data_out_local[4] & ~sgpio_0_data_out_local[4];
-    		C_LOCATE_S3 <= sgpio_0_data_out_local[1] & ~sgpio_0_data_out_local[1];
-    		
-    		// 第二组SGPIO
-    		C_LOCATE_S4 <= sgpio_1_data_out_local[10] & ~sgpio_1_data_out_local[10];
-    		C_LOCATE_S5 <= sgpio_1_data_out_local[7] & ~sgpio_1_data_out_local[7];
-    		C_LOCATE_S6 <= sgpio_1_data_out_local[4] & ~sgpio_1_data_out_local[4];
-    		C_LOCATE_S7 <= sgpio_1_data_out_local[1] & ~sgpio_1_data_out_local[1];
+        		//更新输出信号
+            	C_LOCATE_S0 <= sgpio_0_data_out[22] & ~sgpio_0_data_out[22];
+    			C_LOCATE_S1 <= sgpio_0_data_out[19] & ~sgpio_0_data_out[19];
+    			C_LOCATE_S2 <= sgpio_0_data_out[16] & ~sgpio_0_data_out[16];
+    			C_LOCATE_S3 <= sgpio_0_data_out[13] & ~sgpio_0_data_out[13];
+    			
+    			//第二组SGPIO
+    			C_LOCATE_S4 <= sgpio_1_data_out[22] & ~sgpio_1_data_out[22];
+    			C_LOCATE_S5 <= sgpio_1_data_out[19] & ~sgpio_1_data_out[19];
+    			C_LOCATE_S6 <= sgpio_1_data_out[16] & ~sgpio_1_data_out[16];
+    			C_LOCATE_S7 <= sgpio_1_data_out[13] & ~sgpio_1_data_out[13];
+                
+//            	C_LOCATE_S0 <= (sgpio_0_data_out[22] | sgpio_0_data_out_local[10]) & ~(sgpio_0_data_out[22] | sgpio_0_data_out_local[10]);
+//    			C_LOCATE_S1 <= (sgpio_0_data_out[19] | sgpio_0_data_out_local[7]) & ~(sgpio_0_data_out[19] | sgpio_0_data_out_local[7]);  
+//    			C_LOCATE_S2 <= (sgpio_0_data_out[16] | sgpio_0_data_out_local[4]) & ~(sgpio_0_data_out[16] | sgpio_0_data_out_local[4]);  
+//    			C_LOCATE_S3 <= (sgpio_0_data_out[13] | sgpio_0_data_out_local[1]) & ~(sgpio_0_data_out[13] | sgpio_0_data_out_local[1]);  
+    			
+//    			// 第二组SGPIO
+//    			C_LOCATE_S4 <= (sgpio_1_data_out[22] | sgpio_1_data_out_local[10]) & ~(sgpio_1_data_out[22] | sgpio_1_data_out_local[10]);
+//    			C_LOCATE_S5 <= (sgpio_1_data_out[19] | sgpio_1_data_out_local[7]) & ~(sgpio_1_data_out[19] | sgpio_1_data_out_local[7]);
+//    			C_LOCATE_S6 <= (sgpio_1_data_out[16] | sgpio_1_data_out_local[4]) & ~(sgpio_1_data_out[16] | sgpio_1_data_out_local[4]);
+//    			C_LOCATE_S7 <= (sgpio_1_data_out[13] | sgpio_1_data_out_local[1]) & ~(sgpio_1_data_out[13] | sgpio_1_data_out_local[1]);
+                
+//                C_LOCATE_S0 <= sgpio_0_data_out_local[10] & ~sgpio_0_data_out_local[10];
+//    			C_LOCATE_S1 <= sgpio_0_data_out_local[7] & ~sgpio_0_data_out_local[7];  
+//    			C_LOCATE_S2 <= sgpio_0_data_out_local[4] & ~sgpio_0_data_out_local[4];  
+//    			C_LOCATE_S3 <= sgpio_0_data_out_local[1] & ~sgpio_0_data_out_local[1];  
+    			
+//    			// 第二组SGPIO
+//    			C_LOCATE_S4 <= sgpio_1_data_out_local[10] & ~sgpio_1_data_out_local[10];
+//    			C_LOCATE_S5 <= sgpio_1_data_out_local[7] & ~sgpio_1_data_out_local[7] ;
+//    			C_LOCATE_S6 <= sgpio_1_data_out_local[4] & ~sgpio_1_data_out_local[4] ;
+//    			C_LOCATE_S7 <= sgpio_1_data_out_local[1] & ~sgpio_1_data_out_local[1] ;
         end
     end
 
+//sgpio_0_data_out[21];
+                     
+//sgpio_0_data_out[18];
+////                   
+//sgpio_0_data_out[15];
+////              []   
+//sgpio_0_data_out[12];
+////              []   
+////              []   
+//sgpio_0_data_out[21];
+////              []   
+//sgpio_0_data_out[18];
+////              []   
+//sgpio_0_data_out[15];
+////              []   
+//sgpio_0_data_out[12]; 
+
     // 第一组SGPIO
-//    assign C_ACT_S0 = ~sgpio_0_data_out[11];
-    assign C_ERROR_S0 = sgpio_0_data_out[21];
-    
-//    assign C_ACT_S1 = ~sgpio_0_data_out[8];
-    assign C_ERROR_S1 = sgpio_0_data_out[18];
-    
-//    assign C_ACT_S2 = ~sgpio_0_data_out[5];
-    assign C_ERROR_S2 = sgpio_0_data_out[15];
-    
-//    assign C_ACT_S3 = ~sgpio_0_data_out[2];
-    assign C_ERROR_S3 = sgpio_0_data_out[12];
-    
-    // 第二组SGPIO
-//    assign C_ACT_S4 = ~sgpio_1_data_out[11];
-    assign C_ERROR_S4 = sgpio_1_data_out[21];
-    
-//    assign C_ACT_S5 = ~sgpio_1_data_out[8];
-    assign C_ERROR_S5 = sgpio_1_data_out[18];
-    
-//    assign C_ACT_S6 = ~sgpio_1_data_out[5];
-    assign C_ERROR_S6 = sgpio_1_data_out[15];
-    
-//    assign C_ACT_S7 = ~sgpio_1_data_out[2];
-    assign C_ERROR_S7 = sgpio_1_data_out[12];
+    assign C_ERROR_S0 = /*sgpio_0_data_out_local[9] &*/ sgpio_0_data_out[21];
+                       
+    assign C_ERROR_S1 = /*sgpio_0_data_out_local[6] &*/ sgpio_0_data_out[18];
+                       
+    assign C_ERROR_S2 = /*sgpio_0_data_out_local[3] &*/ sgpio_0_data_out[15];
+                       
+    assign C_ERROR_S3 = /*sgpio_0_data_out_local[0] &*/ sgpio_0_data_out[12];
+                        
+    // 第二组SGPIO         
+    assign C_ERROR_S4 = /*sgpio_1_data_out_local[9] &*/ sgpio_1_data_out[21];
+                                                                        
+    assign C_ERROR_S5 = /*sgpio_1_data_out_local[6] &*/ sgpio_1_data_out[18];
+                                                                        
+    assign C_ERROR_S6 = /*sgpio_1_data_out_local[3] &*/ sgpio_1_data_out[15];
+                                                                        
+    assign C_ERROR_S7 = /*sgpio_1_data_out_local[0] &*/ sgpio_1_data_out[12];
     
     parameter   FCLK                =       50_000_000 ;//系统时钟频率，默认100MHz。    
     parameter   FSCL                =       250_000    ;//IIC时钟频率，默认400KHz。    
@@ -289,9 +352,9 @@ module SGPIO_DEMO_TOP(
         begin
             pwm_value = 0;
             // 示例逻辑：根据温度调整 PWM 输出
-            if (temp_data_4E > 8'h80) begin
+            if (temp_data_4E > 8'h37) begin
                 pwm_value = 8'hFF; // 高速风扇
-            end else if (temp_data_4E > 8'h28) begin
+            end else if (temp_data_4E > 8'h1E) begin
                 pwm_value = 8'hA0; // 中速风扇
             end else begin
                 pwm_value = 8'h00; // 低速风扇
